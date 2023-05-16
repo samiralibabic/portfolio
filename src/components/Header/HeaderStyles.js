@@ -50,8 +50,8 @@ export const Div3 = styled.div`
   }
 `;
 
-// Navigation Links
-export const NavLink = styled.a`
+// Navigation Links - to be nested inside <Link />
+export const NavLink = styled.div`
   font-size: 2rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);

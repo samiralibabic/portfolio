@@ -9,7 +9,7 @@ export const FooterWrapper = styled.section`
 
 
   @media ${props => props.theme.breakpoints.sm} {
-    padding: 0 16px 48px;
+    padding: 0 16px 18px;
     width: calc(100vw - 32px);
   }
 `
@@ -54,9 +54,8 @@ justify-content: space-between;
 }
 
 @media ${props => props.theme.breakpoints.sm}{
-  display: flex;
+	display: flex;
 	width: 100%;
-  flex-direction: column;
 }
 `
 
@@ -75,7 +74,6 @@ export const CompanyContainer = styled.div`
 	@media ${props => props.theme.breakpoints.sm}{
 		display: flex;
 		flex-direction: column;
-		margin: 0 0 32px;
 		align-items: center;
 	}
 `

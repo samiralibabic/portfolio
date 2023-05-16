@@ -7,17 +7,17 @@ export const Img = styled.img`
   overflow: hidden;
 `
 
-export const GridContainer = styled.section`
+export const GridContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
+padding: ${(props) =>props.nopadding ? '0' : '3rem'};
+place-items: baseline;
 column-gap: 2rem;
 row-gap: 3rem;
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: ${(props) =>props.nopadding ? '0' : '2rem'};
   padding-bottom: 0;
 }
 
@@ -35,7 +35,7 @@ export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-
+  margin-top: 20px;
 `;
 
 

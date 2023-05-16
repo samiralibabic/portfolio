@@ -1,26 +1,27 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 
 import { Container, Span, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import { useSmoothScroll } from '../../pages/_app';
 
 const Header = () => (
-  <Container>
+<Container>
     <Div1>
       <Link href="/" style={{ display: "flex", alignItems: "center", color: "white", marginBottom: "20px" }}>
-        <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
+        <DiCssdeck size="3rem" /> <Span>Samir Alibabic</Span>
       </Link>
     </Div1>
     <Div2>
-        <Link href="#projects">
+        {/* <Link href="#projects" scroll={true}>
           <NavLink>Projects</NavLink>
-        </Link>
+        </Link> */}
         <Link href="#tech">
           <NavLink>Techonologies</NavLink>
         </Link>
-        <Link href="#about">
-          <NavLink>About</NavLink>
+        <Link href="#contact">
+          <NavLink>Contact</NavLink>
         </Link>
     </Div2>
     <Div3>

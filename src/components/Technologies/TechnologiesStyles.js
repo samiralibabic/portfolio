@@ -53,6 +53,7 @@ export const List = styled.ul`
 export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media ${props => props.theme.breakpoints.sm}{
     display: flex;
@@ -61,6 +62,9 @@ export const ListContainer = styled.div`
 `
 
 export const ListTitle = styled.h4`
+  display: flex;
+  padding: 20px;
+  align-items: center;
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;

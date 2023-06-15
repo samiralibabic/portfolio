@@ -10,27 +10,37 @@ export const Img = styled.img`
 export const GridContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: ${(props) =>props.nopadding ? '0' : '3rem'};
+padding: ${(props) => props.nopadding ? '0' : '3rem'};
 place-items: baseline;
 column-gap: 2rem;
 row-gap: 3rem;
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
   flex-direction: column;
-  padding: ${(props) =>props.nopadding ? '0' : '2rem'};
+  padding: ${(props) => props.nopadding ? '0' : '2rem'};
   padding-bottom: 0;
 }
-
 `
+
+export const GridColumn = styled.div`
+display: grid;
+grid-template-columns: minmax(0,1fr);
+row-gap: 30px;
+width: 100%;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
+`
+
 export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
-  width: 400px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
-`;
+`
+
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;

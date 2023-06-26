@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from '../../layout/Layout'
-import { StaticPageWrapper } from '../style'
+import { StaticPageWrapper } from '../../styles/styleLegal'
 
 const PrivacyPolicy = () => {
     return (

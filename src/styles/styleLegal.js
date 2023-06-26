@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Section } from "../styles/GlobalComponents";
+import { Section } from "./GlobalComponents";
 
 export const StaticPageWrapper = styled(Section)`
     display: flex;

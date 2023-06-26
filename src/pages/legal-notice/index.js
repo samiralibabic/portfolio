@@ -107,13 +107,13 @@ const LegalNotice = () => {
             <br />
             <SectionSubText>Last Updated: 26.07.2023.</SectionSubText>
             <br />
-            {/* 
+            
               <SectionSubText>
                 Source: <Link href="https://www.e-recht24.de/impressum/13120-impressum-auf-englisch-fuer-ihre-website.html" target='_blank'>
                   <LegalNavLink>e-recht24.de</LegalNavLink>
                 </Link>
               </SectionSubText><br />
- */}
+
           </LegalContentColumn>
 
         </StaticPageWrapper>

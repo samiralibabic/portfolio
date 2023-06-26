@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer } from './FooterStyles';
 
 const Footer = () => {
   return (
@@ -35,8 +35,14 @@ const Footer = () => {
         </SocialIcons>
       </SocialIconsContainer>
 
-      <Link href='/legal-notice'>Legal Notice</Link>
-      <Link href='/privacy-policy'>Privacy Policy</Link>
+      <LegalLinks >
+        <Link href='/legal-notice'>
+          <LegalNavLink>Impressum / Legal Notice</LegalNavLink>
+        </Link>
+        <Link href='/privacy-policy'>
+          <LegalNavLink>Datenschutzerklärung / Privacy Policy</LegalNavLink>
+        </Link>
+      </LegalLinks>
 
     </FooterWrapper>
   );

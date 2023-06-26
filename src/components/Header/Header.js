@@ -3,7 +3,8 @@ import React from 'react';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import { FaLaptopCode } from 'react-icons/fa';
 
-import { Container, Span, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import { Container, Span, Div1, Div2, Div3, SocialIcons } from './HeaderStyles';
+import { NavLink } from '../../styles/GlobalComponents/index'
 import { useSmoothScroll } from '../../pages/_app';
 
 const Header = () => (

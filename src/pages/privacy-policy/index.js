@@ -1,9 +1,17 @@
 import React from 'react'
+import { Layout } from '../../layout/Layout'
+import { StaticPageWrapper } from '../style'
 
 const PrivacyPolicy = () => {
-  return (
-    <div>Privacy Policy</div>
-  )
+    return (
+        <>
+          <Layout>
+            <StaticPageWrapper>
+              
+            </StaticPageWrapper>
+          </Layout>
+        </>
+      )
 }
 
 export default PrivacyPolicy

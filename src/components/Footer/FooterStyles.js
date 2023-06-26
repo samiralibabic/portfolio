@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { NavLink, SectionText } from "../../styles/GlobalComponents"
 
 export const FooterWrapper = styled.section`
 	width: calc(100vw - 96px);
@@ -35,7 +36,7 @@ export const LinkItem = styled.a`
 	}
 
 	@media ${props => props.theme.breakpoints.sm} {
-		font-size: 8px;
+		font-size: 10px;
 		line-height: 14px;
 		margin-bottom: 8px;
 		display: flex;
@@ -154,4 +155,32 @@ export const LinkTitle = styled.h4`
 		line-height: 12px;
 		margin-bottom: 8px;
 	}
+`
+export const LegalLinks = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+`
+
+export const LegalNavLink = styled(NavLink)`
+	margin-right: 3rem;
+	font-size: 1.5rem;
+		@media ${props => props.theme.breakpoints.md} {
+		font-size: 16px;
+		line-height: 28px;
+		display: flex;
+	}
+
+	@media ${props => props.theme.breakpoints.sm} {
+		font-size: 12px;
+		line-height: 14px;
+		margin-bottom: 8px;
+		display: flex;
+		align-items: center;
+	}
+`
+
+export const LegalSectionText = styled(SectionText)`
+	padding-bottom: 1rem;
+	margin-top: 2rem;
 `

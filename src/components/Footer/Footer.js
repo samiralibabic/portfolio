@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/HeaderStyles';
@@ -7,7 +8,8 @@ import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTi
 const Footer = () => {
   return (
     <FooterWrapper>
-      <LinkList>
+
+      <LinkList id='contact'>
         <LinkColumn>
           <LinkTitle>Call</LinkTitle>
           <LinkItem href='tel:+49-1516-5727063'>+49-1516-5727063</LinkItem>
@@ -17,6 +19,7 @@ const Footer = () => {
           <LinkItem href='mailto:samir.alibabic@gmail.com'>samir.alibabic@gmail.com</LinkItem>
         </LinkColumn>
       </LinkList>
+
       <SocialIconsContainer>
         <CompanyContainer>
           <Slogan>Inovating one project at a time</Slogan>
@@ -31,6 +34,10 @@ const Footer = () => {
           <AiFillTwitterCircle size="3rem" />
         </SocialIcons>
       </SocialIconsContainer>
+
+      <Link href='/legal-notice'>Legal Notice</Link>
+      <Link href='/privacy-policy'>Privacy Policy</Link>
+
     </FooterWrapper>
   );
 };

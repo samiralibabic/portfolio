@@ -279,7 +279,7 @@ export const LinkIconImg = styled.div`
   }
 `
 // Navigation Links - to be nested inside <Link />
-export const NavLink = styled.p`
+export const NavLink = styled.span`
 display: inline;
   font-size: 2rem;
   line-height: 32px;

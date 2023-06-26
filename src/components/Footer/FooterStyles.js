@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { NavLink, SectionText } from "../../styles/GlobalComponents"
+import { NavLink } from "../../styles/GlobalComponents"
 
 export const FooterWrapper = styled.section`
 	width: calc(100vw - 96px);
@@ -178,9 +178,4 @@ export const LegalNavLink = styled(NavLink)`
 		display: flex;
 		align-items: center;
 	}
-`
-
-export const LegalSectionText = styled(SectionText)`
-	padding-bottom: 1rem;
-	margin-top: 2rem;
 `

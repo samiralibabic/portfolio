@@ -1,9 +1,8 @@
 import React from 'react'
 import { Layout } from '../../layout/Layout'
-import { LegalContentColumn, StaticPageWrapper } from '../../styles/styleLegal'
+import { LegalContentColumn, StaticPageWrapper, LegalSectionText, LegalNavLink } from '../../styles/styleLegal'
 import { NavLink, SectionDivider, SectionSubText, Section, SectionTitle } from '../../styles/GlobalComponents'
 import Link from 'next/link'
-import { LegalNavLink, LegalSectionText } from '../../components/Footer/FooterStyles'
 
 
 

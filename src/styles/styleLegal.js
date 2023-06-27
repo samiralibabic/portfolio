@@ -43,7 +43,7 @@ export const LegalSectionList = styled.ul`
 `
 
 export const LegalSectionListItem = styled.li`
-	color: rgba(255,255,255,0.75);
+	color: rgba(255,255,255,0.6);
     padding: 1rem;
     list-style: disc;
 `

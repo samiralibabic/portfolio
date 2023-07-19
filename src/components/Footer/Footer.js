@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
+import { FaMastodon } from 'react-icons/fa';
 
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer } from './FooterStyles';
@@ -32,6 +33,9 @@ const Footer = () => {
         </SocialIcons>
         <SocialIcons href='https://twitter.com/samiralibabic' target='_blank'>
           <AiFillTwitterCircle size="3rem" />
+        </SocialIcons>
+        <SocialIcons rel="me" href='https://mastodon.social/@samiralibabic' target='_blank'>
+          <FaMastodon size="3rem" />
         </SocialIcons>
       </SocialIconsContainer>
 

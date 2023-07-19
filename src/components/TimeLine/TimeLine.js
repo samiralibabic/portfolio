@@ -44,7 +44,7 @@ const calculateAge = (birthDate) => {
 
 const Timeline = () => {
   const [activeItem, setActiveItem] = useState(0);
-  const [age, setAge] = useState(calculateAge('1984-10-16'));
+  const [age, setAge] = useState(null);
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
@@ -78,7 +78,6 @@ const Timeline = () => {
   // snap back to beginning of scroll when window is resized
   // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
-    console.log("handler");
     const handleResize = () => {
       scroll(carouselRef.current, 0);
     };
@@ -86,7 +85,7 @@ const Timeline = () => {
   }, []);
 
   useEffect(() => {
-    console.log("age");
+    setAge(calculateAge('1984-10-16'));
     const interval = setInterval(() => {
       setAge(calculateAge('1984-10-16'));
     }, 1000);
@@ -100,9 +99,10 @@ const Timeline = () => {
     <Section>
       <SectionDivider />
       <SectionTitle main>Timeline</SectionTitle>
-      <SectionText>
-        {`Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to acomplish the following:`}
-      </SectionText>
+      <SectionText
+      dangerouslySetInnerHTML={age && {
+          __html: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`,
+        }}/>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (

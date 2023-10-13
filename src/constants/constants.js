@@ -44,6 +44,7 @@ export const technologies = {
     "SCSS",
     "Tailwind CSS",
     "Material UI",
+    "Ant Design",
     "JavaScript",
     "TypeScript",
     "jQuery",
@@ -51,12 +52,16 @@ export const technologies = {
     "React Native",
     "Redux",
     "Next.js",
+    "Astro",
     "Vite",
     "Handlebars",
     "Electron",
     "Flutter",
     "D3",
-    "Highcharts"
+    "Highcharts",
+    "Vue.js", // Added Vue.js
+    "Web Components", // Added Web Components
+    "Axios", // Added Axios
   ],
   backEnd: [
     "Node.js",
@@ -71,7 +76,11 @@ export const technologies = {
     "PostgreSQL",
     "MongoDB",
     "GraphQL",
-    "Elasticsearch"
+    "Elasticsearch",
+    "Microservices",
+    "RESTful API", 
+    "OAuth 2.0", 
+    "Docker Compose", 
   ],
   cloudAndDeployment: [
     "Google Cloud",
@@ -83,7 +92,11 @@ export const technologies = {
     "Git",
     "GitHub",
     "Bitbucket",
-    "Webpack"
+    "Webpack",
+    "DigitalOcean", 
+    "Vercel",
+    "Kubernetes (k8s)", 
+    "CI/CD", 
   ],
   additionalSkills: [
     "Test-Driven Development (TDD)",
@@ -95,9 +108,12 @@ export const technologies = {
     "Figma",
     "Sketch",
     "SOLID",
-    "DRY"
-  ]
+    "DRY",
+    "Agile",
+    "Composable architecture", 
+  ],
 };
+
 
 export const TimeLineData = [
   { year: 2009, text: 'Supporting a team of civil engineers in GIS, IT and Web services', },

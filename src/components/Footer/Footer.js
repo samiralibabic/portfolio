@@ -12,10 +12,6 @@ const Footer = () => {
 
       <LinkList id='contact'>
         <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href='tel:+49-1516-5727063'>+49-1516-5727063</LinkItem>
-        </LinkColumn>
-        <LinkColumn>
           <LinkTitle>E-Mail</LinkTitle>
           <LinkItem href='mailto:samir.alibabic@gmail.com'>samir.alibabic@gmail.com</LinkItem>
         </LinkColumn>

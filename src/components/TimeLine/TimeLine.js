@@ -24,20 +24,13 @@ const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 const calculateAge = (birthDate) => {
   const today = new Date();
   const birthDateObj = new Date(birthDate);
-  const ageInMillis = today - birthDateObj;
 
-  const years = Math.floor(ageInMillis / (1000 * 60 * 60 * 24 * 365));
-  const months = Math.floor(
-    (ageInMillis % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
-  );
-  const days = Math.floor(
-    (ageInMillis % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-  );
-  const hours = Math.floor(
-    (ageInMillis % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((ageInMillis % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((ageInMillis % (1000 * 60)) / 1000);
+  const years = today.getFullYear() - birthDateObj.getFullYear();
+  const months = today.getMonth() - birthDateObj.getMonth();
+  const days = today.getDate() - birthDateObj.getDate();
+  const hours = today.getHours() - birthDateObj.getHours();
+  const minutes = today.getMinutes() - birthDateObj.getMinutes();
+  const seconds = today.getSeconds() - birthDateObj.getSeconds();
 
   return { years, months, days, hours, minutes, seconds };
 };

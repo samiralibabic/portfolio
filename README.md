@@ -1,5 +1,7 @@
 # Developer portfolio
 
+![screenshot](screenshot.png)
+
 A portfolio with basic information about skills and experience.
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)

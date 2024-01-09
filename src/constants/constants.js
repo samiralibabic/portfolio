@@ -65,6 +65,7 @@ export const technologies = {
   ],
   backEnd: [
     "Node.js",
+    "Bun",
     "Express",
     "Java",
     "Spring Boot",

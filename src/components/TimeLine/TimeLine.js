@@ -25,12 +25,29 @@ const calculateAge = (birthDate) => {
   const today = new Date();
   const birthDateObj = new Date(birthDate);
 
-  const years = today.getFullYear() - birthDateObj.getFullYear();
-  const months = today.getMonth() - birthDateObj.getMonth();
-  const days = today.getDate() - birthDateObj.getDate();
+  let years = today.getFullYear() - birthDateObj.getFullYear();
+  let months = today.getMonth() - birthDateObj.getMonth();
+  let days = today.getDate() - birthDateObj.getDate();
   const hours = today.getHours() - birthDateObj.getHours();
   const minutes = today.getMinutes() - birthDateObj.getMinutes();
   const seconds = today.getSeconds() - birthDateObj.getSeconds();
+  // If the current day of the month is less than the birth day, subtract one month
+  if (days < 0) {
+    months--;
+    // Calculate the number of days remaining in the previous month
+    const daysInPrevMonth = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      0
+    ).getDate();
+    days += daysInPrevMonth;
+  }
+
+  // If the current month is less than the birth month, subtract one year
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
 
   return { years, months, days, hours, minutes, seconds };
 };
@@ -93,7 +110,7 @@ const Timeline = () => {
       <SectionDivider />
       <SectionTitle main>Timeline</SectionTitle>
       <SectionText
-      dangerouslySetInnerHTML={age && {
+        dangerouslySetInnerHTML={age && {
           __html: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`,
         }}/>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>

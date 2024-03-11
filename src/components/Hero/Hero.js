@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Hero = (props) => (
   <LeftSection>
     <SectionTitle main center>
-      Discover the transformative power of captivating digital experiences.
+      Software Engineer | Indiehacker | Entrepreneur
     </SectionTitle>
     <SectionText>
       Welcome to my developer portfolio, where I combine a passion for <Link href="https://github.com/samiralibabic" 

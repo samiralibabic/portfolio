@@ -1,14 +1,4 @@
 module.exports = {
-    async rewrites() {
-      return [
-        {
-          source: '/blog',
-          destination: 'https://blog.samiralibabic.com',
-        },
-        {
-          source: '/blog/:path*',
-          destination: 'https://blog.samiralibabic.com/:path*',
-        },
-      ]
-    },
-  }
+  // Remove the async rewrites() function if it's only used for the blog
+  // If you have other rewrites, keep them and just remove the blog-related ones
+}

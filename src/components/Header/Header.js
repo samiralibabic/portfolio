@@ -24,6 +24,9 @@ const Header = () => (
         <Link href="#contact" scroll={false}>
           <NavLink>Contact</NavLink>
         </Link>
+        <Link href="/blog">
+          <a>Blog</a>
+        </Link>
     </Div2>
     <Div3>
       <SocialIcons href='https://github.com/samiralibabic' target='_blank'>

@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -30,7 +30,14 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='en-GB'>
-        <Head />
+        <Head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="Portfolio of Samir Alibabic - Software Engineer, Indiehacker, and Entrepreneur" />
+          <meta name="keywords" content="software engineer, indiehacker, entrepreneur, portfolio, web development" />
+          <meta name="author" content="Samir Alibabic" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <body>
           <Main />
           <NextScript />

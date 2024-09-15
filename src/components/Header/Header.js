@@ -21,7 +21,7 @@ const Header = () => (
         <Link href="#contact" scroll={false}>
           <NavLink>Contact</NavLink>
         </Link>
-        <Link href="/blog">
+        <Link href="https://blog.samiralibabic.com" target="_blank" rel="noopener noreferrer">
           <NavLink>Blog</NavLink>
         </Link>
     </Div2>

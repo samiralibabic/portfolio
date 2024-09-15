@@ -15,17 +15,14 @@ const Header = () => (
       </Link>
     </Div1>
     <Div2>
-        {/* <Link href="#projects" scroll={true}>
-          <NavLink>Projects</NavLink>
-        </Link> */}
         <Link href="#tech" scroll={false}>
-          <NavLink>Techonologies</NavLink>
+          <NavLink>Technologies</NavLink>
         </Link>
         <Link href="#contact" scroll={false}>
           <NavLink>Contact</NavLink>
         </Link>
         <Link href="/blog">
-          <a>Blog</a>
+          <NavLink>Blog</NavLink>
         </Link>
     </Div2>
     <Div3>

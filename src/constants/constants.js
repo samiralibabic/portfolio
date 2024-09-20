@@ -119,7 +119,7 @@ export const technologies = {
 export const TimeLineData = [
   { year: 2009, text: 'Supporting a team of civil engineers in GIS, IT and Web services', },
   { year: 2010, text: 'Side hustles as a freelance developer for various clients', },
-  { year: 2016, text: 'Shrinking into a full-stack developer by working on enterprise level software', },
-  { year: 2023, text: 'Started creating content, digital products and own software', },
+  { year: 2016, text: 'Growing into a full-stack developer while working on enterprise software', },
+  { year: 2023, text: 'Started indie hacking, building e-commerce stores and building own software', },
   { year: 2024, text: 'Working on multiple SaaS & E-commerce platforms', },
 ];

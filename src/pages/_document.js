@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
       <Html lang='en-GB'>
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Portfolio of Samir Alibabic - Software Engineer, Indiehacker, and Entrepreneur" />
           <meta name="keywords" content="software engineer, indiehacker, entrepreneur, portfolio, web development" />
           <meta name="author" content="Samir Alibabic" />

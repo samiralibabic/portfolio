@@ -4,16 +4,16 @@ export const Img = styled.img`
   width:100%;
   height:100%;
   object-fit: cover;
-  overflow: hidden;
+  overflow: hidden;  
+  loading: lazy;
 `
 
 export const GridContainer = styled.div`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 2rem;
 padding: ${(props) => props.nopadding ? '0' : '3rem'};
-place-items: baseline;
-column-gap: 2rem;
-row-gap: 3rem;
+grid-auto-flow: dense;
 @media ${(props) => props.theme.breakpoints.sm} {
   display: flex;
   flex-direction: column;
@@ -36,6 +36,12 @@ export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
+  widht: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 10px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -48,13 +54,20 @@ export const TitleContent = styled.div`
   margin-top: 20px;
 `;
 
-
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: .5rem 0;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  a {
+    color: #d4c0c0;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -82,7 +95,6 @@ export const CardInfo = styled.p`
   color: #e4e6e7;
   font-style: 2rem;
   line-height: 24px;
-  text-align: justify;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding:.3rem
   

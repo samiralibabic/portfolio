@@ -31,6 +31,17 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+    
+  .my-masonry-grid {
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
 
 `;
 

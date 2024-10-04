@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
+import { SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 import Link from 'next/link';
@@ -11,11 +11,7 @@ const Hero = (props) => (
       Software Engineer | Indiehacker | Entrepreneur
     </SectionTitle>
     <SectionText>
-      Welcome to my developer portfolio, where I combine a passion for <Link href="https://github.com/samiralibabic" 
-      style={{ color: "white" }} target='_blank'> coding</Link>, a <Link href="https://samiralibabic.hashnode.dev/" 
-      style={{ color: "white" }} target='_blank'>creative</Link> mindset, and the utilization of emerging <Link href='#tech'
-      style={{ color: "white" }} scroll={false}>technologies</Link> to deliver
-      innovative and impactful solutions to challenges.
+      Hi there! I'm Samir. I love creating things with code. Check out my <Link href='#projects' style={{ color: "white" }} scroll={false}>projects</Link> to see what I've built.
     </SectionText>
     <Button onClick={() => window.location = '#contact'}>Contact me</Button>
   </LeftSection>

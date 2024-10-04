@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import Masonry from 'react-masonry-css';
+import { BlogCard, CardInfo, ExternalLinks, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
@@ -8,30 +8,41 @@ const Projects = () => (
   <Section id='projects'>
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
-    <GridContainer nopadding>
-      {projects.map(({ id, image, title, description, tags, source, visit }) => (
+    <Masonry
+      breakpointCols={{
+        default: 3,
+        1100: 2,
+        700: 1
+      }}
+      className="my-masonry-grid"
+      columnClassName="my-masonry-grid_column"
+    >
+      {projects.map(({ id, image, title, description, tags, visit }) => (
         <BlogCard key={id}>
-          <Img src={image} />
+          {image && (
+            <a href={visit} target="_blank" rel="noopener noreferrer">
+              <Img src={image} alt={title} />
+            </a>
+          )}
           <TitleContent>
-            <HeaderThree title={title}>{title}</HeaderThree>
+            <HeaderThree title={title}>
+              <a href={visit} target="_blank" rel="noopener noreferrer">
+                {title}
+              </a>
+            </HeaderThree>
             <Hr />
           </TitleContent>
           <CardInfo>{description}</CardInfo>
           <div>
-            <TitleContent>Stack</TitleContent>
             <TagList>
               {tags.map((tag, i) => (
                 <Tag key={i}>{tag}</Tag>
               ))}
             </TagList>
           </div>
-          <UtilityList>
-            <ExternalLinks href={visit}>Visit site</ExternalLinks>
-            <ExternalLinks href={source}>View source code</ExternalLinks>
-          </UtilityList>
         </BlogCard>
       ))}
-    </GridContainer>
+    </Masonry>
   </Section>
 );
 

@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 
+export const TechGridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  grid-auto-flow: dense;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+`;
+
 export const ImageContainer = styled.div`
   text-align: center;
   background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);

@@ -23,7 +23,7 @@ const ScrollToTop = () => {
 
     return (
         <ScrollToTopIcon href="/" scroll={false}>
-            <FaArrowUp size="3rem" />
+            <FaArrowUp size="30" />
         </ScrollToTopIcon>
     )
 }

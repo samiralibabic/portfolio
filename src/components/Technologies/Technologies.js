@@ -16,7 +16,7 @@ const Technologies = () => (
       <GridColumn>
         <BlogCard>
           <ListContainer>
-            <ListTitle><DiReact size='3rem' style={{ minWidth: '30px', marginRight: '10px' }} />Front-End</ListTitle>
+            <ListTitle><DiReact size='30' style={{ minWidth: '30px', marginRight: '10px' }} />Front-End</ListTitle>
             {technologies.frontEnd.map((feTech) => (
               <ListItem key={feTech}><ListParagraph>{feTech}</ListParagraph></ListItem>
             ))}
@@ -24,7 +24,7 @@ const Technologies = () => (
         </BlogCard>
         <BlogCard>
           <ListContainer>
-            <ListTitle><DiJava size='3rem' style={{ minWidth: '30px', marginRight: '10px' }} />Back-End</ListTitle>
+            <ListTitle><DiJava size='30' style={{ minWidth: '30px', marginRight: '10px' }} />Back-End</ListTitle>
             {technologies.backEnd.map((beTech) => (
               <ListItem key={beTech}><ListParagraph>{beTech}</ListParagraph></ListItem>
             ))}
@@ -34,7 +34,7 @@ const Technologies = () => (
       <GridColumn>
         <BlogCard>
           <ListContainer>
-            <ListTitle><DiGoogleCloudPlatform size='3rem' style={{ minWidth: '30px', marginRight: '10px' }} />DevOps</ListTitle>
+            <ListTitle><DiGoogleCloudPlatform size='30' style={{ minWidth: '30px', marginRight: '10px' }} />DevOps</ListTitle>
             {technologies.devOps.map((devOps) => (
               <ListItem key={devOps}><ListParagraph>{devOps}</ListParagraph></ListItem>
             ))}
@@ -42,7 +42,7 @@ const Technologies = () => (
         </BlogCard>
         <BlogCard>
           <ListContainer>
-            <ListTitle><DiWordpress size='3rem' style={{ minWidth: '30px', marginRight: '10px' }} /> Additional Skills and Practices</ListTitle>
+            <ListTitle><DiWordpress size='30' style={{ minWidth: '30px', marginRight: '10px' }} /> Additional Skills and Practices</ListTitle>
             {technologies.additionalSkills.map((additionalSkills) => (
               <ListItem key={additionalSkills}><ListParagraph>{additionalSkills}</ListParagraph></ListItem>
             ))}

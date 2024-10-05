@@ -22,16 +22,16 @@ const Footer = () => {
           <Slogan>Inovating one project at a time</Slogan>
         </CompanyContainer>
         <SocialIcons href='https://github.com/samiralibabic' target='_blank'>
-          <AiFillGithub size="3" />
+          <AiFillGithub size="30" />
         </SocialIcons>
         <SocialIcons href='https://www.linkedin.com/in/samiralibabic/' target='_blank'>
-          <AiFillLinkedin size="3" />
+          <AiFillLinkedin size="30" />
         </SocialIcons>
         <SocialIcons href='https://twitter.com/samiralibabic' target='_blank'>
-          <AiFillTwitterCircle size="3" />
+          <AiFillTwitterCircle size="30" />
         </SocialIcons>
         <SocialIcons rel="me" href='https://mastodon.social/@samiralibabic' target='_blank'>
-          <FaMastodon size="3" />
+          <FaMastodon size="30" />
         </SocialIcons>
       </SocialIconsContainer>
 

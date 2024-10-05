@@ -10,8 +10,8 @@ import { useSmoothScroll } from '../../pages/_app';
 const Header = () => (
 <Container>
     <Div1>
-      <Link href="/" style={{ display: "flex", alignItems: "center", color: "white", marginBottom: "20px" }}>
-        <FaLaptopCode size="5rem" style={{ marginRight: "10px" }}/> <Span>dip.ing. Samir Alibabic</Span>
+      <Link href="/" style={{ display: "flex", alignItems: "center", color: "white" }}>
+        <FaLaptopCode size="50" style={{ marginRight: "10px" }}/> <Span>dip.ing. Samir Alibabic</Span>
       </Link>
     </Div1>
     <Div2>
@@ -27,13 +27,13 @@ const Header = () => (
     </Div2>
     <Div3>
       <SocialIcons href='https://github.com/samiralibabic' target='_blank'>
-        <AiFillGithub size="3rem" />
+        <AiFillGithub size="30" />
       </SocialIcons>
       <SocialIcons href='https://www.linkedin.com/in/samiralibabic/' target='_blank'>
-        <AiFillLinkedin size="3rem" />
+        <AiFillLinkedin size="30" />
       </SocialIcons>
       <SocialIcons href='https://twitter.com/samiralibabic' target='_blank'>
-        <AiFillTwitterCircle size="3rem" />
+        <AiFillTwitterCircle size="30" />
       </SocialIcons>
     </Div3>
   </Container>

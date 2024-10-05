@@ -34,7 +34,7 @@ const Technologies = () => (
       <GridColumn>
         <BlogCard>
           <ListContainer>
-            <ListTitle><DiGoogleCloudPlatform size='3rem' style={{ minWidth: '30px', marginRight: '10px' }} />Cloud and Deployment</ListTitle>
+            <ListTitle><DiGoogleCloudPlatform size='3rem' style={{ minWidth: '30px', marginRight: '10px' }} />DevOps</ListTitle>
             {technologies.devOps.map((devOps) => (
               <ListItem key={devOps}><ListParagraph>{devOps}</ListParagraph></ListItem>
             ))}

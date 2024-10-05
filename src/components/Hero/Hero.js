@@ -11,7 +11,7 @@ const Hero = (props) => (
       Software Engineer | Indiehacker | Entrepreneur
     </SectionTitle>
     <SectionText>
-      Hi there! I'm Samir. I love creating things with code. Check out my <Link href='#projects' style={{ color: "white" }} scroll={false}>projects</Link> to see what I've built.
+      Hi there! I'm Samir. I love creating things with code (and no-code). Check out my <Link href='#projects' style={{ color: "white" }} scroll={false}>projects</Link> to see what I've built.
     </SectionText>
     <Button onClick={() => window.location = '#contact'}>Contact me</Button>
   </LeftSection>

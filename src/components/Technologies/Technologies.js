@@ -10,7 +10,7 @@ const Technologies = () => (
     <SectionDivider />
     <SectionTitle main>Technologies</SectionTitle>
     <SectionText>Over the course of my career, I have worked with a wide range of technologies,
-      with different levels of proficiency, enabling me to deliver robust and efficient solutions.
+      with different levels of proficiency, but nowadays I mostly ship fast with no-code/low-code tools.
     </SectionText>
     <TechGridContainer>
       <GridColumn>

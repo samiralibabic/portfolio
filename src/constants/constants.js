@@ -24,6 +24,14 @@ export const projects = [
     id: 2,
   },
   {
+    title: 'Reise Prints',
+    description: 'A Print-On-Demand shop for travel-related products in the German market.',
+    image: '/images/reiseprints.png',
+    tags: ['Print-On-Demand', 'Travel'],
+    visit: 'https://reiseprints.de',
+    id: 3,
+  },
+  {
     title: 'Hunde & Katzen Druck',
     description: 'A Print-On-Demand shop for dog and cat lovers in the German market.',
     image: '/images/hundekatzendruck.png',
@@ -96,9 +104,9 @@ export const technologies = {
     "Flutter",
     "D3",
     "Highcharts",
-    "Vue.js", // Added Vue.js
-    "Web Components", // Added Web Components
-    "Axios", // Added Axios
+    "Vue.js", 
+    "Web Components", 
+    "Axios", 
   ],
   backEnd: [
     "Node.js",

@@ -3,10 +3,15 @@ import { Layout } from '../../layout/Layout'
 import { StaticPageWrapper, LegalSectionText, LegalSectionH3, LegalSectionH4, LegalSectionList, LegalSectionListItem, LegalNavLink } from '../../styles/styleLegal'
 import { NavLink, SectionDivider, SectionSubText, Section, SectionTitle } from '../../styles/GlobalComponents'
 import Link from 'next/link'
+import Head from 'next/head';
 
 const PrivacyPolicy = () => {
   return (
     <>
+      <Head>
+        <title>Privacy Policy - Samir Alibabic</title>
+        <meta name="description" content="Privacy Policy for Samir Alibabic's website" />
+      </Head>
       <Layout>
 
         <Section>

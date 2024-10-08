@@ -3,12 +3,17 @@ import { Layout } from '../../layout/Layout'
 import { LegalContentColumn, StaticPageWrapper, LegalSectionText, LegalNavLink } from '../../styles/styleLegal'
 import { NavLink, SectionDivider, SectionSubText, Section, SectionTitle } from '../../styles/GlobalComponents'
 import Link from 'next/link'
+import Head from 'next/head';
 
 
 
 const LegalNotice = () => {
   return (
     <>
+      <Head>
+        <title>Legal Notice - Samir Alibabic</title>
+        <meta name="description" content="Legal Notice for Samir Alibabic's website" />
+      </Head>
       <Layout>
 
         <Section>

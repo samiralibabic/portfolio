@@ -5,7 +5,8 @@ export const Img = styled.img`
   height:100%;
   object-fit: cover;
   overflow: hidden;  
-  loading: lazy;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 `
 
 export const GridContainer = styled.div`
@@ -42,6 +43,9 @@ export const BlogCard = styled.div`
   flex-direction: column;
   margin-bottom: 40px;
   padding: 10px;
+  &:hover ${Img} {
+    filter: grayscale(0%);
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }

@@ -78,6 +78,14 @@ export const projects = [
     tags: ['SEO', 'Blogging', 'Humor'],
     visit: 'https://lustigesprueche.online',
     id: 8,
+  },
+  {
+    title: 'WebCrawler',
+    description: 'A web crawler to gather external links from any page or entire domain.',
+    image: '/images/webcrawler.png',
+    tags: ['Web Crawling', 'Link Building'],
+    visit: 'https://crawler.samiralibabic.com',
+    id: 9,
   }
 ];
 

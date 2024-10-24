@@ -86,6 +86,14 @@ export const projects = [
     tags: ['Web Crawling', 'Link Building'],
     visit: 'https://crawler.samiralibabic.com',
     id: 9,
+  },
+  {
+    title: 'Affiliate Companies',
+    description: 'Discover the top affiliate programs with excellent earning potential.',
+    image: '/images/affiliatecompanies.png',
+    tags: ['Affiliate Marketing', 'Directory'],
+    visit: 'https://affiliatecompanies.net',
+    id: 10,
   }
 ];
 

@@ -17,7 +17,7 @@ const Projects = () => (
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      {projects.map(({ id, image, title, description, tags, visit }) => (
+      {projects.slice().reverse().map(({ id, image, title, description, tags, visit }) => (
         <BlogCard key={id}>
           {image && (
             <a href={visit} target="_blank" rel="noopener noreferrer">

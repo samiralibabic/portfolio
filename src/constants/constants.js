@@ -96,7 +96,7 @@ export const projects = [
     id: 11,
   },
   {
-    title: 'PrintOnDemandBusiness',
+    title: 'Print On Demand Business',
     description: 'A comprehensive directory of suppliers for your print-on-demand businesses.',
     image: '/images/printondemandbusiness.png',
     tags: ['Print-On-Demand', 'Directory'],

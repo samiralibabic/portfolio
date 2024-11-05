@@ -37,7 +37,7 @@ export const projects = [
     image: '/images/hundekatzendruck.png',
     tags: ['Print-On-Demand', 'E-commerce'],
     visit: 'https://hundekatzendruck.de',
-    id: 3,
+    id: 4,
   },
   {
     title: 'Retro Heim & Leben',
@@ -45,7 +45,7 @@ export const projects = [
     image: '/images/retroheimundleben.png',
     tags: ['Print-On-Demand', 'Home Decor'],
     visit: 'https://retroheimundleben.de',
-    id: 4,
+    id: 5,
   },
   {
     title: 'Personalisierte Babykleidung',
@@ -53,7 +53,7 @@ export const projects = [
     image: '/images/personalisiertebabykleidung.png',
     tags: ['Print-On-Demand', 'Baby Products'],
     visit: 'https://personalisiertebabykleidung.de',
-    id: 5,
+    id: 6,
   },
   {
     title: 'Notion Template (MDW)',
@@ -61,7 +61,7 @@ export const projects = [
     image: '/images/notion-template.png',
     tags: ['Notion', 'Templates'],
     visit: 'https://www.notion.so/templates/million-dollar-weekend-workbook',
-    id: 6,
+    id: 7,
   },
   {
     title: 'Print2Social',
@@ -69,7 +69,7 @@ export const projects = [
     image: '/images/print2social.png',
     tags: ['SaaS', 'Automation', 'Print-On-Demand'],
     visit: 'https://print2social.com',
-    id: 7,
+    id: 8,
   },
   {
     title: 'Lustige Sprüche',
@@ -77,7 +77,7 @@ export const projects = [
     image: '/images/lustigesprueche.png',
     tags: ['SEO', 'Blogging', 'Humor'],
     visit: 'https://lustigesprueche.online',
-    id: 8,
+    id: 9,
   },
   {
     title: 'WebCrawler',
@@ -85,7 +85,7 @@ export const projects = [
     image: '/images/webcrawler.png',
     tags: ['Web Crawling', 'Link Building'],
     visit: 'https://crawler.samiralibabic.com',
-    id: 9,
+    id: 10,
   },
   {
     title: 'Affiliate Companies',
@@ -93,7 +93,15 @@ export const projects = [
     image: '/images/affiliatecompanies.png',
     tags: ['Affiliate Marketing', 'Directory'],
     visit: 'https://affiliatecompanies.net',
-    id: 10,
+    id: 11,
+  },
+  {
+    title: 'PrintOnDemandBusiness',
+    description: 'A comprehensive directory of suppliers for your print-on-demand businesses.',
+    image: '/images/printondemandbusiness.png',
+    tags: ['Print-On-Demand', 'Directory'],
+    visit: 'https://printondemandbusiness.com',
+    id: 12,
   }
 ];
 

@@ -40,14 +40,12 @@ const LegalNotice = () => {
 
             <LegalSectionText>Kontakt</LegalSectionText>
             <SectionSubText>
-              Telefon: +49 1516 5727063<br />
-              E-Mail: samir.alibabic@gmail.com<br />
+              E-Mail: kontakt-at-samiralibabic.de
             </SectionSubText>
 
             <LegalSectionText>Redaktionell verantwortlich</LegalSectionText>
             <SectionSubText>
-              Telefon: +49 1516 5727063<br />
-              E-Mail: samir.alibabic@gmail.com<br />
+              E-Mail: kontakt-at-samiralibabic.de
             </SectionSubText><br />
             
               <SectionSubText>
@@ -86,14 +84,12 @@ const LegalNotice = () => {
 
             <LegalSectionText>Contact</LegalSectionText>
             <SectionSubText>
-              Telefon: +49 1516 5727063<br />
-              E-Mail: samir.alibabic@gmail.com<br />
+              Email: kontakt-at-samiralibabic.de
             </SectionSubText>
 
             <LegalSectionText>Responsible for content</LegalSectionText>
             <SectionSubText>
-              Telefon: +49 1516 5727063<br />
-              E-Mail: samir.alibabic@gmail.com<br />
+              Email: kontakt-at-samiralibabic.de
             </SectionSubText>
 
             <LegalSectionText>Liability for Content</LegalSectionText>

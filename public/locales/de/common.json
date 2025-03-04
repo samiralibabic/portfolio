@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Samir Alibabic - Software-Ingenieur, Indiehacker, Unternehmer",
+    "description": "Portfolio von Samir Alibabic - Präsentation von Projekten und Fähigkeiten im Bereich Software-Engineering, Indie-Hacking und Unternehmertum."
+  },
+  "hero": {
+    "title": "Software-Ingenieur | Indiehacker | Unternehmer",
+    "intro": "Hallo! Ich bin Samir. Ich liebe es, Dinge mit Code (und No-Code) zu erstellen. Schauen Sie sich meine Projekte an, um zu sehen, was ich gebaut habe.",
+    "contact": "Kontaktieren Sie mich"
+  },
+  "navigation": {
+    "projects": "Projekte",
+    "technologies": "Technologien",
+    "about": "Über mich",
+    "testimonials": "Referenzen",
+    "contact": "Kontakt"
+  },
+  "projects": {
+    "title": "Projekte",
+    "subtitle": "Sehen Sie sich einige meiner neuesten Arbeiten an",
+    "visit": "Besuchen",
+    "discontinued": "EINGESTELLT"
+  },
+  "technologies": {
+    "title": "Technologien",
+    "subtitle": "Im Laufe meiner Karriere habe ich mit einer Vielzahl von Technologien auf unterschiedlichen Kompetenzniveaus gearbeitet, aber heutzutage setze ich hauptsächlich auf schnelle Entwicklung mit No-Code/Low-Code-Tools und KI.",
+    "frontend": "Front-End",
+    "backend": "Back-End",
+    "devops": "DevOps",
+    "additional": "Zusätzliche Fähigkeiten und Praktiken"
+  },
+  "about": {
+    "title": "Über Mich",
+    "subtitle": "Mein Hintergrund und meine Reise",
+    "ageText": "Seit ich vor {{years}} Jahren, {{months}} Monaten, {{days}} Tagen, {{hours}} Stunden, {{minutes}} Minuten und {{seconds}} Sekunden geboren wurde, habe ich Folgendes erreicht:"
+  },
+  "testimonials": {
+    "title": "Referenzen",
+    "subtitle": "Was andere über meine Arbeit sagen"
+  },
+  "footer": {
+    "privacy": "Datenschutzerklärung",
+    "legal": "Impressum",
+    "email": "E-Mail",
+    "slogan": "Innovation, ein Projekt nach dem anderen"
+  },
+  "language": {
+    "en": "Englisch",
+    "de": "Deutsch"
+  },
+  "acomplishments": {
+    "title": "Erfolge",
+    "projects": "Open Source Projekte",
+    "students": "Studenten",
+    "followers": "Github Follower",
+    "stars": "Github Sterne"
+  },
+  "timeline": {
+    "0": "Unterstützung eines Teams von Bauingenieuren in den Bereichen GIS, IT und Webdienste",
+    "1": "Nebenprojekte als freiberuflicher Entwickler für verschiedene Kunden",
+    "2": "Entwicklung zum Full-Stack-Entwickler während der Arbeit an Unternehmenssoftware",
+    "3": "Beginn mit Indie-Hacking, Aufbau von E-Commerce-Shops und Entwicklung eigener Software",
+    "4": "Arbeit an mehreren SaaS- und E-Commerce-Plattformen"
+  }
+} 

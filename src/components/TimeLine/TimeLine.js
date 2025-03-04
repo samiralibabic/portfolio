@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useTranslation } from 'next-i18next';
 
 import {
   CarouselButton,
@@ -53,6 +54,7 @@ const calculateAge = (birthDate) => {
 };
 
 const Timeline = () => {
+  const { t } = useTranslation('common');
   const [activeItem, setActiveItem] = useState(0);
   const [age, setAge] = useState(null);
   const carouselRef = useRef();
@@ -108,10 +110,18 @@ const Timeline = () => {
   return (
     <Section>
       <SectionDivider />
-      <SectionTitle main>Timeline</SectionTitle>
+      <SectionTitle main>{t('about.title')}</SectionTitle>
       <SectionText
         dangerouslySetInnerHTML={age && {
-          __html: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`,
+          __html: t('about.ageText', {
+            years: age.years,
+            months: age.months,
+            days: age.days,
+            hours: age.hours,
+            minutes: age.minutes,
+            seconds: age.seconds,
+            defaultValue: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`
+          }),
         }}/>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
@@ -127,7 +137,7 @@ const Timeline = () => {
                 onClick={(e) => handleClick(e, index)}
               >
                 <CarouselItemTitle>{item.year}</CarouselItemTitle>
-                <CarouselItemText>{item.text}</CarouselItemText>
+                <CarouselItemText>{t(`timeline.${index}`, { defaultValue: item.text })}</CarouselItemText>
               </CarouselItem>
             </CarouselMobileScrollNode>
           ))}

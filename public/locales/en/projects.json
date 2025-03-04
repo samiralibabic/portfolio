@@ -1,0 +1,44 @@
+{
+  "projects": {
+    "title": "Projects",
+    "0": {
+      "description": "A platform to organize, track, and analyze the performance of shared links."
+    },
+    "1": {
+      "description": "[DISCONTINUED] Turn your Hashnode blog into a Notion database and manage it with everything else."
+    },
+    "2": {
+      "description": "A Print-On-Demand shop for humorous T-shirts and bags in the German market."
+    },
+    "3": {
+      "description": "A Print-On-Demand shop for travel-related products in the German market."
+    },
+    "4": {
+      "description": "A Print-On-Demand shop for dog and cat lovers in the German market."
+    },
+    "5": {
+      "description": "A Print-On-Demand shop for retro-style home and decorations in the German market."
+    },
+    "6": {
+      "description": "[DISCONTINUED] A Print-On-Demand shop for baby products in the German market."
+    },
+    "7": {
+      "description": "A Notion template for Noah Kagan's book \"Million Dollar Weekend.\""
+    },
+    "8": {
+      "description": "An AI-powered social media manager for Print-On-Demand businesses."
+    },
+    "9": {
+      "description": "A niche German website with funny slogans and jokes that drives traffic to other ventures."
+    },
+    "10": {
+      "description": "A web crawler to gather external links from any page or entire domain."
+    },
+    "11": {
+      "description": "Discover the top affiliate programs with excellent earning potential."
+    },
+    "12": {
+      "description": "A comprehensive directory of suppliers for your print-on-demand businesses."
+    }
+  }
+} 

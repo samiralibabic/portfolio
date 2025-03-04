@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import { FaMastodon } from 'react-icons/fa';
 
@@ -7,19 +8,21 @@ import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer } from './FooterStyles';
 
 const Footer = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <FooterWrapper>
 
       <LinkList id='contact'>
         <LinkColumn>
-          <LinkTitle>E-Mail</LinkTitle>
+          <LinkTitle>{t('footer.email', 'E-Mail')}</LinkTitle>
           <LinkItem href='kontakt-at-samiralibabic.de'>kontakt-at-samiralibabic.de</LinkItem>
         </LinkColumn>
       </LinkList>
 
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Inovating one project at a time</Slogan>
+          <Slogan>{t('footer.slogan', 'Innovating one project at a time')}</Slogan>
         </CompanyContainer>
         <SocialIcons href='https://github.com/samiralibabic' target='_blank'>
           <AiFillGithub size="30" />
@@ -35,12 +38,12 @@ const Footer = () => {
         </SocialIcons>
       </SocialIconsContainer>
 
-      <LegalLinks >
+      <LegalLinks>
         <Link href='/legal-notice'>
-          <LegalNavLink>Impressum / Legal Notice</LegalNavLink>
+          <LegalNavLink>{t('footer.legal')}</LegalNavLink>
         </Link>
         <Link href='/privacy-policy'>
-          <LegalNavLink>Datenschutzerklärung / Privacy Policy</LegalNavLink>
+          <LegalNavLink>{t('footer.privacy')}</LegalNavLink>
         </Link>
       </LegalLinks>
 

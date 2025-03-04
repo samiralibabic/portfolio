@@ -35,6 +35,20 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="software engineer, indiehacker, entrepreneur, portfolio, web development" />
           <meta name="author" content="Samir Alibabic" />
           <link rel="icon" href="/favicon.ico" />
+          {/* Preconnect to Google Fonts to avoid 400 errors */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          {/* Override system-ui font to prevent 400 errors */}
+          <style>
+            {`
+              @font-face {
+                font-family: 'system-ui';
+                font-style: normal;
+                font-weight: 400;
+                src: local(".SFNS-Regular"), local("BlinkMacSystemFont"), local("Segoe UI"), local("Roboto"), local("Oxygen"), local("Ubuntu"), local("Cantarell"), local("Fira Sans"), local("Droid Sans"), local("Helvetica Neue");
+              }
+            `}
+          </style>
         </Head>
         <body>
           <Main />

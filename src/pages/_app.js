@@ -1,29 +1,38 @@
 import Theme from '../styles/theme';
+import { appWithTranslation } from 'next-i18next';
 import { Analytics } from '@vercel/analytics/react';
-import { Space_Grotesk } from 'next/font/google'
-import Head from 'next/head';
+import { Space_Grotesk } from 'next/font/google';
+import { useEffect, useState } from 'react';
+import '../utils/i18n';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
+  style: ['normal'],
+  display: 'swap',
 })
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
+  // Use this to prevent hydration issues
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Theme>
       <style jsx global>{`
-        html {
-          font-family: ${spaceGrotesk.style.fontFamily};
+        :root {
+          --space-grotesk-font: ${spaceGrotesk.style.fontFamily};
         }
       `}</style>
-        <Component {...pageProps} />
+      <Theme key={`theme-provider-${mounted ? 'mounted' : 'unmounted'}`}>
+        {mounted ? <Component {...pageProps} /> : <div style={{ visibility: 'hidden' }} />}
         <Analytics />
       </Theme>
     </>
   );
 }
+
+export default appWithTranslation(App);

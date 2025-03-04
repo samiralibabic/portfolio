@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Samir Alibabic - Software Engineer, Indiehacker, Entrepreneur",
+    "description": "Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship."
+  },
+  "hero": {
+    "title": "Software Engineer | Indiehacker | Entrepreneur",
+    "intro": "Hi there! I'm Samir. I love creating things with code (and no-code). Check out my projects to see what I've built.",
+    "contact": "Contact me"
+  },
+  "navigation": {
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Check out some of my recent work",
+    "visit": "Visit",
+    "discontinued": "DISCONTINUED"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "Over the course of my career, I have worked with a wide range of technologies, with different levels of proficiency, but nowadays I mostly ship fast with no-code/low-code tools and AI.",
+    "frontend": "Front-End",
+    "backend": "Back-End",
+    "devops": "DevOps",
+    "additional": "Additional Skills and Practices"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My background and journey",
+    "ageText": "Since I've been born {{years}} years, {{months}} months, {{days}} days, {{hours}} hours, {{minutes}} minutes, and {{seconds}} seconds ago, I've managed to accomplish the following:"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What people say about my work"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice",
+    "email": "E-Mail",
+    "slogan": "Innovating one project at a time"
+  },
+  "language": {
+    "en": "English",
+    "de": "German"
+  },
+  "acomplishments": {
+    "title": "Acomplishments",
+    "projects": "Open Source Projects",
+    "students": "Students",
+    "followers": "Github Followers",
+    "stars": "Github Stars"
+  },
+  "timeline": {
+    "0": "Supporting a team of civil engineers in GIS, IT and Web services",
+    "1": "Side hustles as a freelance developer for various clients",
+    "2": "Growing into a full-stack developer while working on enterprise software",
+    "3": "Started indie hacking, building e-commerce stores and building own software",
+    "4": "Working on multiple SaaS & E-commerce platforms"
+  }
+} 

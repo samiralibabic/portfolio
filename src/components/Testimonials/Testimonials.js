@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
+import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 
 const Testimonials = () => {
+  const { t } = useTranslation('common');
+  
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'text/javascript';
@@ -17,13 +21,17 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <iframe
-      id='testimonialto-samiralibabic-tag-all-dark'
-      src="https://embed-v2.testimonial.to/w/samiralibabic?theme=dark&card=base&loadMore=on&initialCount=20&tag=all"
-      frameBorder="0"
-      scrolling="no"
-      width="100%"
-    />
+    <Section>
+      <SectionDivider />
+      <SectionTitle main>{t('testimonials.title')}</SectionTitle>
+      <iframe
+        id='testimonialto-samiralibabic-tag-all-dark'
+        src="https://embed-v2.testimonial.to/w/samiralibabic?theme=dark&card=base&loadMore=on&initialCount=20&tag=all"
+        frameBorder="0"
+        scrolling="no"
+        width="100%"
+      />
+    </Section>
   );
 };
 

@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;  
-  filter: grayscale(100%);
-  transition: filter 0.5s ease, transform 0.5s ease;
-  border-radius: 12px 12px 0 0; /* Rounded corners for top of image */
-`
-
 export const ImgOverlay = styled.div`
   position: relative;
   z-index: 1;
@@ -25,6 +15,7 @@ export const ImgOverlay = styled.div`
     border-radius: 12px 12px 0 0;
     transition: background 0.3s ease;
     pointer-events: none; /* Ensure it doesn't block clicks */
+    z-index: 2; /* Ensure overlay is above the image */
   }
 `
 
@@ -53,9 +44,10 @@ export const BlogCard = styled.div`
     background: rgba(0, 0, 0, 0);
   }
   
-  &:hover ${Img} {
-    filter: grayscale(0%);
+  &:hover img {
+    filter: grayscale(0%) !important;
     transform: scale(1.05);
+    transition: filter 0.5s ease, transform 0.5s ease;
   }
   
   @media ${(props) => props.theme.breakpoints.sm} {

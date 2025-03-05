@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Masonry from 'react-masonry-css';
 import { useTranslation } from 'next-i18next';
-import { BlogCard, CardInfo, HeaderThree, Hr, Tag, TagList, TitleContent, Img, ImgOverlay } from './ProjectsStyles';
+import Image from 'next/image';
+import { BlogCard, CardInfo, HeaderThree, Hr, Tag, TagList, TitleContent, ImgOverlay } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
@@ -138,7 +139,21 @@ const Projects = () => {
                     {/* Image with grayscale for discontinued projects */}
                     {image && (
                       <ImgOverlay>
-                        <Img src={image} alt={title} style={{ filter: 'grayscale(100%)' }} />
+                        <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+                          <Image 
+                            src={image} 
+                            alt={title} 
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            style={{ 
+                              objectFit: 'cover',
+                              filter: 'grayscale(100%)',
+                              borderRadius: '12px 12px 0 0'
+                            }}
+                            priority={id === 12} // Priority loading for the LCP image
+                            loading={id === 12 ? "eager" : "lazy"}
+                          />
+                        </div>
                       </ImgOverlay>
                     )}
                     
@@ -167,7 +182,20 @@ const Projects = () => {
                     {/* Image for active projects */}
                     {image && (
                       <ImgOverlay>
-                        <Img src={image} alt={title} />
+                        <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+                          <Image 
+                            src={image} 
+                            alt={title} 
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            style={{ 
+                              objectFit: 'cover',
+                              borderRadius: '12px 12px 0 0'
+                            }}
+                            priority={id === 12} // Priority loading for the LCP image
+                            loading={id === 12 ? "eager" : "lazy"}
+                          />
+                        </div>
                       </ImgOverlay>
                     )}
                     

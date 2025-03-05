@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 import {
   CarouselButton,
@@ -12,7 +13,6 @@ import {
   CarouselItemTitle,
   CarouselMobileScrollNode,
   ProfilePhotoContainer,
-  ProfilePhoto,
   ProfileTextContainer,
   ProfileSectionText
 } from "./TimeLineStyles";
@@ -147,7 +147,24 @@ const Timeline = () => {
       <SectionDivider />
       <SectionTitle main>{t('about.title')}</SectionTitle>
       <ProfilePhotoContainer>
-        <ProfilePhoto src="/profile-photo.png" alt="Samir Alibabic" />
+        <div style={{ position: 'relative', width: '180px', height: '180px' }}>
+          <Image 
+            src="/profile-photo.png" 
+            alt="Samir Alibabic" 
+            fill
+            sizes="180px"
+            priority
+            style={{ 
+              objectFit: 'cover',
+              borderRadius: '50%',
+              border: '3px solid transparent',
+              backgroundImage: 'linear-gradient(#0F1624, #0F1624), linear-gradient(120deg, #13ADC7 0%, #945DD6 100%)',
+              backgroundOrigin: 'border-box',
+              backgroundClip: 'padding-box, border-box'
+            }}
+          />
+        </div>
+        
         <ProfileTextContainer>
           <ProfileSectionText
             dangerouslySetInnerHTML={age && {

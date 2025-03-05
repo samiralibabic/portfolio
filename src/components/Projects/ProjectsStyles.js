@@ -1,53 +1,93 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   overflow: hidden;  
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  transition: filter 0.5s ease, transform 0.5s ease;
+  border-radius: 12px 12px 0 0; /* Rounded corners for top of image */
 `
 
-export const GridContainer = styled.div`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-gap: 2rem;
-padding: ${(props) => props.nopadding ? '0' : '3rem'};
-grid-auto-flow: dense;
-@media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
-  padding: ${(props) => props.nopadding ? '0' : '2rem'};
-  padding-bottom: 0;
-}
-`
-
-export const GridColumn = styled.div`
-display: grid;
-grid-template-columns: minmax(0,1fr);
-row-gap: 30px;
-width: 100%;
-  @media ${(props) => props.theme.breakpoints.sm} {
+export const ImgOverlay = styled.div`
+  position: relative;
+  z-index: 1;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    border-radius: 12px 12px 0 0;
+    transition: background 0.3s ease;
+    pointer-events: none; /* Ensure it doesn't block clicks */
   }
 `
 
 export const BlogCard = styled.div`
-  border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
-  widht: 100%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
-  padding: 10px;
+  padding: 0;
+  background: #1D1D1D;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden; /* Keep the banner within the card's boundaries */
+  
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Apply hover effects to the entire card */
+  &:hover ${ImgOverlay}::after {
+    background: rgba(0, 0, 0, 0);
+  }
+  
   &:hover ${Img} {
     filter: grayscale(0%);
+    transform: scale(1.05);
   }
+  
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`
+
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: ${(props) => props.nopadding ? '0' : '3rem'};
+  grid-auto-flow: dense;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    padding: ${(props) => props.nopadding ? '0' : '2rem'};
+    padding-bottom: 0;
+    align-items: center;
+  }
+`
+
+export const GridColumn = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  row-gap: 30px;
+  width: 100%;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+    max-width: 450px;
   }
 `
 
@@ -56,22 +96,15 @@ export const TitleContent = styled.div`
   z-index: 20;
   width: 100%;
   margin-top: 20px;
+  padding: 0 15px;
 `;
 
 export const HeaderThree = styled.h3`
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: .5rem 0;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
-  a {
-    color: #d4c0c0;
-    transition: color 0.3s ease;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #fff;
-  }
 `;
 
 export const Hr = styled.hr`
@@ -79,60 +112,36 @@ export const Hr = styled.hr`
   height: 3px;
   margin: 20px auto;
   border: 0;
-  background: #d0bb57;
+  background: linear-gradient(90deg, #d0bb57, #e6a919);
 `;
-
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: ${props => props.theme.fonts.main};
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`;
-
 
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 50px;
+  padding: 0 25px;
   color: #e4e6e7;
   font-style: 2rem;
   line-height: 24px;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
+  margin-bottom: 15px;
   
-}
-`;
-
-
-export const UtilityList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
-`;
-
-export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0 15px;
+  }
 `;
 
 export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 20px 25px;
+  margin: 0;
 `
+
 export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
+  color: #d8bfbf;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px 12px;
+  border-radius: 20px;
+  list-style: none;
 `

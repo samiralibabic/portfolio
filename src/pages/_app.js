@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { getLocaleFromDomain } from '../utils/localeDetection';
 import '../utils/i18n';
+import '../styles/masonry.css';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],

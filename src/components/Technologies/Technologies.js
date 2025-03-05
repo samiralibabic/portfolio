@@ -3,8 +3,22 @@ import { DiGoogleCloudPlatform, DiJava, DiReact, DiWordpress } from 'react-icons
 import { useTranslation } from 'next-i18next';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { TechGridContainer, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
-import { BlogCard, GridColumn } from '../Projects/ProjectsStyles';
+import { BlogCard } from '../Projects/ProjectsStyles';
 import { technologies } from '../../constants/constants';
+
+// Container style for better centering
+const containerStyle = {
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center'
+};
+
+// Card style to make them narrower
+const cardStyle = {
+  width: '100%',
+  maxWidth: '400px',
+  margin: '0 auto'
+};
 
 const Technologies = () => {
   const { t } = useTranslation('common');
@@ -16,9 +30,9 @@ const Technologies = () => {
       <SectionText>
         {t('technologies.subtitle')}
       </SectionText>
-      <TechGridContainer>
-        <GridColumn>
-          <BlogCard>
+      <div style={containerStyle}>
+        <TechGridContainer>
+          <BlogCard style={cardStyle}>
             <ListContainer>
               <ListTitle><DiReact size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.frontend', 'Front-End')}</ListTitle>
               {technologies.frontEnd.map((feTech) => (
@@ -26,7 +40,8 @@ const Technologies = () => {
               ))}
             </ListContainer>
           </BlogCard>
-          <BlogCard>
+          
+          <BlogCard style={cardStyle}>
             <ListContainer>
               <ListTitle><DiJava size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.backend', 'Back-End')}</ListTitle>
               {technologies.backEnd.map((beTech) => (
@@ -34,9 +49,8 @@ const Technologies = () => {
               ))}
             </ListContainer>
           </BlogCard>
-        </GridColumn>
-        <GridColumn>
-          <BlogCard>
+          
+          <BlogCard style={cardStyle}>
             <ListContainer>
               <ListTitle><DiGoogleCloudPlatform size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.devops', 'DevOps')}</ListTitle>
               {technologies.devOps.map((devOps) => (
@@ -44,7 +58,8 @@ const Technologies = () => {
               ))}
             </ListContainer>
           </BlogCard>
-          <BlogCard>
+          
+          <BlogCard style={cardStyle}>
             <ListContainer>
               <ListTitle><DiWordpress size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.additional', 'Additional Skills and Practices')}</ListTitle>
               {technologies.additionalSkills.map((additionalSkills) => (
@@ -52,8 +67,8 @@ const Technologies = () => {
               ))}
             </ListContainer>
           </BlogCard>
-        </GridColumn>
-      </TechGridContainer>
+        </TechGridContainer>
+      </div>
     </Section>
   );
 };

@@ -2,7 +2,7 @@ module.exports = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'de'],
-    localeDetection: false,
+    localeDetection: true,
     domains: [
       {
         domain: 'www.samiralibabic.com',
@@ -11,10 +11,9 @@ module.exports = {
       {
         domain: 'www.samiralibabic.de',
         defaultLocale: 'de',
-        localeDetection: true,
         http: process.env.NODE_ENV === 'development',
       }
     ]
   },
   localePath: './public/locales',
-} 
+}

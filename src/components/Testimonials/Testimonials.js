@@ -12,11 +12,15 @@ const Testimonials = () => {
     document.head.appendChild(script);
 
     script.onload = () => {
-      iFrameResize({ log: false, checkOrigin: false }, '#testimonialto-samiralibabic-tag-all-dark');
+      if (typeof iFrameResize === 'function') {
+        iFrameResize({ log: false, checkOrigin: false }, '#testimonialto-samiralibabic-tag-all-dark');
+      }
     };
 
     return () => {
-      document.head.removeChild(script);
+      if (script.parentNode) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
@@ -30,6 +34,8 @@ const Testimonials = () => {
         frameBorder="0"
         scrolling="no"
         width="100%"
+        title="Testimonials"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       />
     </Section>
   );

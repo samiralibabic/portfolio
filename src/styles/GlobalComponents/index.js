@@ -280,7 +280,7 @@ export const LinkIconImg = styled.div`
 `
 // Navigation Links - to be nested inside <Link />
 export const NavLink = styled.span`
-display: inline;
+  display: inline;
   font-size: 2rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
@@ -292,5 +292,9 @@ display: inline;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 24px;
+    margin: 0.2rem;
+    display: inline-block;
   }
 `;

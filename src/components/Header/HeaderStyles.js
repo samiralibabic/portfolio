@@ -11,15 +11,21 @@ export const Container = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0.3rem;
+    grid-row-gap: 0.3rem;
+    padding: 0.5rem;
+    padding-top: 1rem;
   }
 `;
 
 export const Span = styled.span`
   font-size: 2rem;
   display: inline-block;
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.6rem;
+  }
 `
 
 export const Div1 = styled.div`
@@ -38,7 +44,12 @@ export const Div2 = styled.div`
   gap: 1rem;
   align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+    grid-area: 2 / 1 / 3 / 6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
   }
 `;
 export const Div3 = styled.div`

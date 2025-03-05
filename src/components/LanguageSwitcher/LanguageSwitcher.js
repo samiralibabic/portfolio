@@ -17,12 +17,22 @@ const LanguageButton = styled.button`
   &:hover {
     color: white;
   }
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 0.9rem;
+    margin: 0 0.3rem;
+    padding: 0.3rem;
+  }
 `;
 
 const LanguageContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 1.5rem;
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin-left: 0.5rem;
+  }
 `;
 
 const LanguageSwitcher = () => {
@@ -33,18 +43,42 @@ const LanguageSwitcher = () => {
   const changeLanguage = (locale) => {
     // In production, switch domains based on language selection
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      const hostname = window.location.hostname;
-      const isMainDomain = hostname.includes('.com');
-      const isGermanDomain = hostname.includes('.de');
-      
-      if (locale === 'de' && isMainDomain) {
-        // Switch to German domain
-        window.location.href = window.location.href.replace('.com', '.de');
-        return;
-      } else if (locale === 'en' && isGermanDomain) {
-        // Switch to English domain
-        window.location.href = window.location.href.replace('.de', '.com');
-        return;
+      try {
+        const mapping = JSON.parse(process.env.NEXT_PUBLIC_LOCALE_DOMAIN_MAPPING || '{}');
+        const currentHostname = window.location.hostname;
+        
+        // Find the target domain for the selected locale
+        let targetDomain = null;
+        for (const domain in mapping) {
+          if (mapping[domain] === locale) {
+            targetDomain = domain;
+            break;
+          }
+        }
+        
+        // If we found a target domain and it's different from the current one
+        if (targetDomain && !currentHostname.includes(targetDomain)) {
+          // Get the current URL and replace the domain
+          let newUrl = window.location.href;
+          
+          // Replace the domain part
+          for (const domain in mapping) {
+            if (currentHostname.includes(domain)) {
+              newUrl = newUrl.replace(domain, targetDomain);
+              window.location.href = newUrl;
+              return;
+            }
+          }
+          
+          // Fallback if direct replacement didn't work
+          const protocol = window.location.protocol;
+          const path = window.location.pathname;
+          const search = window.location.search;
+          window.location.href = `${protocol}//${targetDomain}${path}${search}`;
+          return;
+        }
+      } catch (e) {
+        console.error('Error processing domain switch:', e);
       }
     }
     

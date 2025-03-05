@@ -15,7 +15,7 @@ const Header = () => {
     <Container>
       <Div1>
         <Link href="/" style={{ display: "flex", alignItems: "center", color: "white" }}>
-          <FaLaptopCode size="50" style={{ marginRight: "10px" }}/> <Span>dip.ing. Samir Alibabic</Span>
+          <FaLaptopCode size="30" style={{ marginRight: "10px" }}/> <Span>dip.ing. Samir Alibabic</Span>
         </Link>
       </Div1>
       <Div2>

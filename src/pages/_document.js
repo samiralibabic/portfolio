@@ -35,6 +35,20 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="software engineer, indiehacker, entrepreneur, portfolio, web development" />
           <meta name="author" content="Samir Alibabic" />
           <link rel="icon" href="/favicon.ico" />
+          {/* Content Security Policy */}
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content={`
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://testimonial.to https://*.testimonial.to https://www.googletagmanager.com https://www.google-analytics.com;
+              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+              img-src 'self' data: https://*.testimonial.to https://www.google-analytics.com;
+              font-src 'self' https://fonts.gstatic.com;
+              connect-src 'self' https://*.testimonial.to https://www.google-analytics.com;
+              frame-src 'self' https://*.testimonial.to;
+              object-src 'none';
+            `.replace(/\s+/g, ' ').trim()}
+          />
           {/* Preconnect to Google Fonts to avoid 400 errors */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

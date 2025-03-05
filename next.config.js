@@ -21,7 +21,7 @@ module.exports = {
               "img-src 'self' data: https://*.testimonial.to https://www.google-analytics.com",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self' https://*.testimonial.to https://www.google-analytics.com https://vitals.vercel-insights.com",
-              "frame-src 'self' https://testimonial.to https://*.testimonial.to",
+              "frame-src https://embed-v2.testimonial.to https://testimonial.to https://*.testimonial.to",
               "object-src 'none'"
             ].join('; ')
           },

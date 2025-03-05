@@ -6,19 +6,26 @@ export const Section = styled.section`
   padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
   margin: 0 auto;
   max-width: 1040px;
-  box-sizing: content-box;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: ${(props) => props.nopadding ? "0" : "24px 48px 0" };
+    flex-direction: column;
+    width: 100%;
+  }
 
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
+    padding: ${(props) => props.nopadding ? "0" : "24px 32px 0" };
     flex-direction: column;
+    width: 100%;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
     width: calc(100vw - 32px);
     flex-direction: column;
   }
@@ -170,7 +177,7 @@ export const ButtonBack = styled.div`
   width: ${({ alt }) => alt ? '150px' : '262px'};
   height: ${({ alt }) => alt ? '52px' : '64px'};
   border-radius: 50px;
-  font-size: ${({ alt }) => alt ? '20px' : '24px'};
+  font-size: ${({ alt }) => alt ? '18px' : '20px'};
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -187,7 +194,7 @@ export const ButtonBack = styled.div`
   @media ${(props) => props.theme.breakpoints.md} {
     width: ${({ alt }) => alt ? '150px' : '184px'};
     height: ${({ alt }) => alt ? '52px' : '48px'};
-    font-size: ${({ alt }) => alt ? '20px' : '16px'};
+    font-size: ${({ alt }) => alt ? '18px' : '16px'};
     margin-bottom: ${({ alt }) => alt ? '0' : '64px'};
   }
 
@@ -211,7 +218,7 @@ export const ButtonFront = styled.button`
   background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
   transition: .4s ease;
-  font-size: ${({ alt }) => alt ? '20px' : '24px'};
+  font-size: ${({ alt }) => alt ? '18px' : '20px'};
   font-weight: 600;
   align-items: center;
   justify-content: center;
@@ -236,7 +243,7 @@ export const ButtonFront = styled.button`
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${({ alt }) => alt ? '20px' : '16px'};
+    font-size: ${({ alt }) => alt ? '18px' : '16px'};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -285,13 +292,28 @@ export const NavLink = styled.span`
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
+  padding: 0.5rem;
+  
   &:hover {
     color: #fff;
     opacity: 1;
     cursor: pointer;
   }
+  
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 1.8rem;
+    line-height: 28px;
+    padding: 0.4rem;
+  }
+  
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.6rem;
+    line-height: 26px;
+    padding: 0.3rem;
+  }
+  
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    padding: 0.25rem;
     font-size: 1.4rem;
     line-height: 24px;
     margin: 0.2rem;

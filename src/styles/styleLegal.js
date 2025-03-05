@@ -7,7 +7,7 @@ export const StaticPageWrapper = styled(Section)`
     flex-direction: row;
     padding: 2rem 48px 40px;
     margin: 1rem auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
 `
 
 // a 2 collumn grid

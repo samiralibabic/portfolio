@@ -18,10 +18,22 @@ const LanguageButton = styled.button`
     color: white;
   }
   
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 0.95rem;
+    margin: 0 0.4rem;
+    padding: 0.4rem;
+  }
+  
+  @media ${(props) => props.theme.breakpoints.md} {
     font-size: 0.9rem;
-    margin: 0 0.3rem;
-    padding: 0.3rem;
+    margin: 0 0.35rem;
+    padding: 0.35rem;
+  }
+  
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 0.85rem;
+    margin: 0 0.25rem;
+    padding: 0.25rem;
   }
 `;
 
@@ -30,8 +42,16 @@ const LanguageContainer = styled.div`
   align-items: center;
   margin-left: 1.5rem;
   
+  @media ${(props) => props.theme.breakpoints.lg} {
+    margin-left: 1.2rem;
+  }
+  
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: 0.8rem;
+  }
+  
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-left: 0.5rem;
+    margin-left: 0.4rem;
   }
 `;
 

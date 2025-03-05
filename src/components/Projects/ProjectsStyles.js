@@ -102,9 +102,9 @@ export const TitleContent = styled.div`
 export const HeaderThree = styled.h3`
   font-weight: 600;
   letter-spacing: 2px;
-  color: #9cc9e3;
+  color: #FFFFFF;
   padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  font-size: ${(props) => props.title ? '2.5rem' : '1.8rem'};
 `;
 
 export const Hr = styled.hr`
@@ -118,7 +118,7 @@ export const Hr = styled.hr`
 export const CardInfo = styled.p`
   width: 100%;
   padding: 0 25px;
-  color: #e4e6e7;
+  color: rgba(255, 255, 255, 0.75);
   font-style: 2rem;
   line-height: 24px;
   margin-bottom: 15px;
@@ -138,7 +138,7 @@ export const TagList = styled.ul`
 `
 
 export const Tag = styled.li`
-  color: #d8bfbf;
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.4rem;
   background: rgba(255, 255, 255, 0.08);
   padding: 5px 12px;

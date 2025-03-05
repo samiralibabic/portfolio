@@ -19,7 +19,7 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Samir Alibabic",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Software Engineer & Digital Entrepreneur",
     "url": "https://samiralibabic.com",
     "sameAs": [
       "https://github.com/samiralibabic",

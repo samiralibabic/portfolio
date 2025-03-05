@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Samir Alibabic - Software Engineer, Indiehacker, Entrepreneur",
+    "title": "Samir Alibabic - Software Engineer & Digital Entrepreneur",
     "description": "Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship."
   },
   "hero": {
-    "title": "Software Engineer | Indiehacker | Entrepreneur",
-    "intro": "Hi there! I'm Samir. I love creating things with code (and no-code). Check out my projects to see what I've built.",
+    "title": "Software Engineer & Digital Entrepreneur",
+    "intro": "Hi there! I'm Samir. I love creating things on the Internet. Check out my projects to see what I've built.",
     "contact": "Contact me"
   },
   "navigation": {
@@ -27,7 +27,37 @@
     "frontend": "Front-End",
     "backend": "Back-End",
     "devops": "DevOps",
-    "additional": "Additional Skills and Practices"
+    "additional": "Additional Skills and Practices",
+    "frontendCategories": {
+      "markup": "Markup Languages",
+      "ui": "UI Libraries",
+      "languages": "Programming Languages",
+      "frameworks": "Frameworks",
+      "tools": "Tools",
+      "visualization": "Visualization"
+    },
+    "backendCategories": {
+      "runtimes": "Runtime Environments",
+      "languages": "Programming Languages",
+      "databases": "Databases",
+      "orm": "ORM & Data Access",
+      "apis": "API Technologies",
+      "infrastructure": "Infrastructure"
+    },
+    "devopsCategories": {
+      "cloud": "Cloud Services",
+      "containerization": "Containerization",
+      "buildTools": "Build Tools",
+      "ci": "Continuous Integration",
+      "versionControl": "Version Control"
+    },
+    "additionalCategories": {
+      "methodologies": "Methodologies",
+      "security": "Security",
+      "cms": "Content Management",
+      "payments": "Payment Systems",
+      "design": "Design Tools"
+    }
   },
   "about": {
     "title": "About Me",
@@ -60,6 +90,7 @@
     "1": "Side hustles as a freelance developer for various clients",
     "2": "Growing into a full-stack developer while working on enterprise software",
     "3": "Started indie hacking, building e-commerce stores and building own software",
-    "4": "Working on multiple SaaS & E-commerce platforms"
+    "4": "Working on multiple SaaS & E-commerce platforms",
+    "5": "Expanding portfolio of online businesses across e-commerce, SaaS, directories, and digital assets"
   }
 } 

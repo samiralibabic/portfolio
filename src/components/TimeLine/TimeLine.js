@@ -11,6 +11,10 @@ import {
   CarouselItemText,
   CarouselItemTitle,
   CarouselMobileScrollNode,
+  ProfilePhotoContainer,
+  ProfilePhoto,
+  ProfileTextContainer,
+  ProfileSectionText
 } from "./TimeLineStyles";
 import {
   Section,
@@ -67,9 +71,16 @@ const Timeline = () => {
     e.preventDefault();
 
     if (carouselRef.current) {
-      const scrollLeft = Math.floor(
-        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
+      // Calculate the maximum scroll position
+      const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+      
+      // Calculate the desired scroll position
+      let scrollLeft = Math.floor(
+        carouselRef.current.scrollWidth * 0.5 * (i / TimeLineData.length)
       );
+      
+      // Ensure we don't scroll beyond the maximum
+      scrollLeft = Math.min(scrollLeft, maxScrollLeft);
 
       scroll(carouselRef.current, scrollLeft);
     }
@@ -77,10 +88,19 @@ const Timeline = () => {
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      const index = Math.round(
-        (carouselRef.current.scrollLeft /
-          (carouselRef.current.scrollWidth * 0.7)) *
-          TimeLineData.length
+      // Calculate the maximum scroll position
+      const maxScrollLeft = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+      
+      // Calculate the current scroll position as a percentage
+      const scrollPercentage = Math.min(
+        carouselRef.current.scrollLeft / maxScrollLeft,
+        1.0
+      );
+      
+      // Calculate the active item based on the scroll percentage
+      const index = Math.min(
+        Math.round(scrollPercentage * (TimeLineData.length - 1)),
+        TimeLineData.length - 1
       );
 
       setActiveItem(index);
@@ -94,6 +114,10 @@ const Timeline = () => {
       scroll(carouselRef.current, 0);
     };
     window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -107,22 +131,38 @@ const Timeline = () => {
     };
   }, []);
 
+  // Ensure the carousel is properly initialized
+  useEffect(() => {
+    if (carouselRef.current) {
+      // Set initial scroll position to 0
+      carouselRef.current.scrollLeft = 0;
+      
+      // Update the active item
+      setActiveItem(0);
+    }
+  }, [TimeLineData.length]);
+
   return (
     <Section>
       <SectionDivider />
       <SectionTitle main>{t('about.title')}</SectionTitle>
-      <SectionText
-        dangerouslySetInnerHTML={age && {
-          __html: t('about.ageText', {
-            years: age.years,
-            months: age.months,
-            days: age.days,
-            hours: age.hours,
-            minutes: age.minutes,
-            seconds: age.seconds,
-            defaultValue: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`
-          }),
-        }}/>
+      <ProfilePhotoContainer>
+        <ProfilePhoto src="/profile-photo.png" alt="Samir Alibabic" />
+        <ProfileTextContainer>
+          <ProfileSectionText
+            dangerouslySetInnerHTML={age && {
+              __html: t('about.ageText', {
+                years: age.years,
+                months: age.months,
+                days: age.days,
+                hours: age.hours,
+                minutes: age.minutes,
+                seconds: age.seconds,
+                defaultValue: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`
+              }),
+            }}/>
+        </ProfileTextContainer>
+      </ProfilePhotoContainer>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (

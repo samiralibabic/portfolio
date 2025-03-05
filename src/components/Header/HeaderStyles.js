@@ -3,19 +3,31 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   padding: 1rem;
   padding-top: 2rem;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.lg} {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-    grid-column-gap: 0.3rem;
-    grid-row-gap: 0.3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 1rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 0.75rem;
+    padding-top: 1.25rem;
+    grid-row-gap: 0.75rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
     padding-top: 1rem;
+    grid-row-gap: 0.5rem;
   }
 `;
 
@@ -23,8 +35,16 @@ export const Span = styled.span`
   font-size: 2rem;
   display: inline-block;
   
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 1.8rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
     font-size: 1.6rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.4rem;
   }
 `
 
@@ -32,34 +52,58 @@ export const Div1 = styled.div`
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 4;
+  align-items: center;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-content: center;
+    margin-bottom: 0.5rem;
   }
 `;
+
 export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 3;
   display: flex;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 1 / 3 / 6;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-area: 2 / 1 / 3 / 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 0.5rem 0;
   }
-`;
-export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    gap: 0.75rem;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    gap: 0.5rem;
+  }
+`;
+
+export const Div3 = styled.div`
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    gap: 0.5rem;
   }
 `;
 
@@ -83,11 +127,8 @@ export const ContactDropDown = styled.button`
     color: #fff;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.lg} {
     padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
   }
 `;
 
@@ -103,29 +144,8 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
     opacity: 1;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.lg} {
     margin: 2px 0 0 2px;
     width: 15px;
   }
 `;
-
-
-// Social Icons 
-
-export const SocialIcons = styled.a`
-  transition: 0.3s ease;
-  color: white;
-  border-radius: 50px;
-  padding: 8px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    background-color: #212d45;
-    transform: scale(1.2);
-    cursor: pointer;
-    
-  }
-`

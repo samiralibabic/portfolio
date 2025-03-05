@@ -1,10 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
-import { FaMastodon } from 'react-icons/fa';
 
-import { SocialIcons } from '../Header/HeaderStyles';
+import SocialIconsGroup from '../SocialIcons/SocialIcons';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer } from './FooterStyles';
 
 const Footer = () => {
@@ -24,18 +22,7 @@ const Footer = () => {
         <CompanyContainer>
           <Slogan>{t('footer.slogan', 'Innovating one project at a time')}</Slogan>
         </CompanyContainer>
-        <SocialIcons href='https://github.com/samiralibabic' target='_blank'>
-          <AiFillGithub size="30" />
-        </SocialIcons>
-        <SocialIcons href='https://www.linkedin.com/in/samiralibabic/' target='_blank'>
-          <AiFillLinkedin size="30" />
-        </SocialIcons>
-        <SocialIcons href='https://twitter.com/samiralibabic' target='_blank'>
-          <AiFillTwitterCircle size="30" />
-        </SocialIcons>
-        <SocialIcons rel="me" href='https://mastodon.social/@samiralibabic' target='_blank'>
-          <FaMastodon size="30" />
-        </SocialIcons>
+        <SocialIconsGroup />
       </SocialIconsContainer>
 
       <LegalLinks>

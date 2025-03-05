@@ -3,24 +3,24 @@ import styled from 'styled-components'
 export const TechGridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Always show 2 columns on desktop */
-  gap: 2rem;
+  gap: 3rem; /* Increased gap to match projects section */
   padding: 3rem;
   max-width: 1000px; /* Limit the overall width */
   width: 100%;
 
   @media ${(props) => props.theme.breakpoints.md} {
     grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on tablet */
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 2rem;
+    padding: 0;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    padding-bottom: 0;
+    padding: 0;
     width: 100%;
+    gap: 2rem; /* Reduced gap for mobile */
   }
 `;
 

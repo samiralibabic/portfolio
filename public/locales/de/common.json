@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Samir Alibabic - Software-Ingenieur, Indiehacker, Unternehmer",
+    "title": "Samir Alibabic - Software-Ingenieur & Digital Unternehmer",
     "description": "Portfolio von Samir Alibabic - Präsentation von Projekten und Fähigkeiten im Bereich Software-Engineering, Indie-Hacking und Unternehmertum."
   },
   "hero": {
-    "title": "Software-Ingenieur | Indiehacker | Unternehmer",
-    "intro": "Hallo! Ich bin Samir. Ich liebe es, Dinge mit Code (und No-Code) zu erstellen. Schauen Sie sich meine Projekte an, um zu sehen, was ich gebaut habe.",
+    "title": "Software-Ingenieur & Digital Unternehmer",
+    "intro": "Hallo! Ich bin Samir. Ich liebe es, Dinge im Internet zu erstellen. Schauen Sie sich meine Projekte an, um zu sehen, was ich gebaut habe.",
     "contact": "Kontaktieren Sie mich"
   },
   "navigation": {
@@ -27,7 +27,37 @@
     "frontend": "Front-End",
     "backend": "Back-End",
     "devops": "DevOps",
-    "additional": "Zusätzliche Fähigkeiten und Praktiken"
+    "additional": "Zusätzliche Fähigkeiten und Praktiken",
+    "frontendCategories": {
+      "markup": "Auszeichnungssprachen",
+      "ui": "UI-Bibliotheken",
+      "languages": "Programmiersprachen",
+      "frameworks": "Frameworks",
+      "tools": "Werkzeuge",
+      "visualization": "Visualisierung"
+    },
+    "backendCategories": {
+      "runtimes": "Laufzeitumgebungen",
+      "languages": "Programmiersprachen",
+      "databases": "Datenbanken",
+      "orm": "ORM & Datenzugriff",
+      "apis": "API-Technologien",
+      "infrastructure": "Infrastruktur"
+    },
+    "devopsCategories": {
+      "cloud": "Cloud-Dienste",
+      "containerization": "Containerisierung",
+      "buildTools": "Build-Tools",
+      "ci": "Continuous Integration",
+      "versionControl": "Versionskontrolle"
+    },
+    "additionalCategories": {
+      "methodologies": "Methoden",
+      "security": "Sicherheit",
+      "cms": "Content-Management",
+      "payments": "Zahlungssysteme",
+      "design": "Design-Tools"
+    }
   },
   "about": {
     "title": "Über Mich",
@@ -60,6 +90,7 @@
     "1": "Nebenprojekte als freiberuflicher Entwickler für verschiedene Kunden",
     "2": "Entwicklung zum Full-Stack-Entwickler während der Arbeit an Unternehmenssoftware",
     "3": "Beginn mit Indie-Hacking, Aufbau von E-Commerce-Shops und Entwicklung eigener Software",
-    "4": "Arbeit an mehreren SaaS- und E-Commerce-Plattformen"
+    "4": "Arbeit an mehreren SaaS- und E-Commerce-Plattformen",
+    "5": "Erweiterung des Portfolios an Online-Unternehmen in den Bereichen E-Commerce, SaaS, Verzeichnisse und digitale Assets"
   }
 } 

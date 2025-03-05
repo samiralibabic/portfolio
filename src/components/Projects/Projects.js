@@ -9,18 +9,59 @@ import { projects } from '../../constants/constants';
 const customStyles = `
   .discontinued-banner {
     position: absolute;
-    top: 15px;
+    top: 30px;
     right: -30px;
     background-color: #FF0000;
     color: white;
     padding: 3px 30px;
     transform: rotate(45deg);
     font-weight: bold;
-    z-index: 10;
+    z-index: 2;
     font-size: 10px;
     letter-spacing: 1px;
     pointer-events: none;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  
+  .my-masonry-grid {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 20px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div {
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 1024px) {
+    .my-masonry-grid {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .my-masonry-grid_column {
+      padding-left: 15px;
+    }
+    .my-masonry-grid_column > div {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .my-masonry-grid_column {
+      padding-left: 0;
+    }
+    .my-masonry-grid_column > div {
+      margin-bottom: 15px;
+    }
   }
 `;
 
@@ -35,7 +76,10 @@ const breakpointColumnsObj = {
 const containerStyle = {
   width: '100%',
   display: 'flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: '0 auto',
+  padding: '0'
 };
 
 // Hardcoded list of discontinued project IDs based on translation files
@@ -59,7 +103,7 @@ const Projects = () => {
   }, [i18n.language]);
   
   return (
-    <Section nopadding id="projects">
+    <Section id="projects">
       <SectionDivider />
       <SectionTitle main>{t('common:projects.title')}</SectionTitle>
       <div style={containerStyle}>
@@ -67,14 +111,13 @@ const Projects = () => {
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
-          style={{ width: '100%', maxWidth: '1200px' }}
         >
           {projects.slice().reverse().map(({ id, image, title, description, tags, visit }) => {
             // Check if this project is in our hardcoded discontinued list
             const isDiscontinued = discontinuedProjects.includes(id);
             
-            // Try to get translated description from projects.json
-            const translatedDescription = t(`projects:${id}.description`, { defaultValue: description });
+            // Get translated description with correct path
+            const translatedDescription = t(`projects:projects.${id}.description`, { defaultValue: description });
             
             // Clean description text by removing the discontinued tag
             const cleanDescription = translatedDescription

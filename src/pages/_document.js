@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
       <Html lang='en-GB'>
         <Head>
           <meta charSet="utf-8" />
-          <meta name="keywords" content="software engineer, indiehacker, entrepreneur, portfolio, web development" />
+          <meta name="keywords" content="software engineer, digital entrepreneur, portfolio, web development" />
           <meta name="author" content="Samir Alibabic" />
           <link rel="icon" href="/favicon.ico" />
           {/* Content Security Policy */}

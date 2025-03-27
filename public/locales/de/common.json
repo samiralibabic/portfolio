@@ -13,7 +13,11 @@
     "technologies": "Technologien",
     "about": "Über mich",
     "testimonials": "Referenzen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "related": "Verwandte Seiten",
+    "social": "Soziale Medien"
   },
   "projects": {
     "title": "Projekte",

@@ -153,6 +153,37 @@ const PrivacyPolicy = () => {
           <SectionSubText>
             {t('source')}
           </SectionSubText>
+
+          <SectionDivider />
+          
+          {/* Footer Navigation */}
+          <div style={{ marginTop: '2rem' }}>
+            <LegalSectionText>{t('common:navigation.related')}</LegalSectionText>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+              <Link href="/legal-notice">
+                <LegalNavLink>{t('common:navigation.legal')}</LegalNavLink>
+              </Link>
+              <Link href="/#contact">
+                <LegalNavLink>{t('common:navigation.contact')}</LegalNavLink>
+              </Link>
+              <Link href="/#projects">
+                <LegalNavLink>{t('common:navigation.projects')}</LegalNavLink>
+              </Link>
+            </div>
+            
+            <LegalSectionText>{t('common:navigation.social')}</LegalSectionText>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <Link href="https://github.com/samiralibabic" target="_blank" rel="noopener noreferrer">
+                <LegalNavLink>GitHub</LegalNavLink>
+              </Link>
+              <Link href="https://linkedin.com/in/samiralibabic" target="_blank" rel="noopener noreferrer">
+                <LegalNavLink>LinkedIn</LegalNavLink>
+              </Link>
+              <Link href="https://twitter.com/samiralibabic" target="_blank" rel="noopener noreferrer">
+                <LegalNavLink>Twitter</LegalNavLink>
+              </Link>
+            </div>
+          </div>
         </StaticPageWrapper>
       </Layout>
     </>

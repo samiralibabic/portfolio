@@ -13,7 +13,11 @@
     "technologies": "Technologies",
     "about": "About",
     "testimonials": "Testimonials",
-    "contact": "Contact"
+    "contact": "Contact",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "related": "Related Pages",
+    "social": "Social Media"
   },
   "projects": {
     "title": "Projects",

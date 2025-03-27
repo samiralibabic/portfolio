@@ -31,13 +31,14 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
-        <meta property="og:title" content={t('meta.title')} />
-        <meta property="og:description" content={t('meta.description')} />
+        <title>{t('meta.title', { defaultValue: 'Samir Alibabic - Software Engineer & Digital Entrepreneur' })}</title>
+        <meta name="description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship.' })} />
+        <meta property="og:title" content={t('meta.title', { defaultValue: 'Samir Alibabic - Software Engineer & Digital Entrepreneur' })} />
+        <meta property="og:description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship.' })} />
         <meta property="og:image" content="https://samiralibabic.com/og-image.jpg" />
         <meta property="og:url" content="https://samiralibabic.com" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://samiralibabic.com" />
       </Head>
       <Layout>
         <JsonLd data={jsonLd} />
@@ -57,9 +58,13 @@ const Home = () => {
 
 // This function gets called at build time on server-side
 export async function getStaticProps({ locale }) {
+  const translations = await serverSideTranslations(locale, ['common', 'projects']);
+  console.log('Building page for locale:', locale);
+  console.log('Translations loaded:', Object.keys(translations._nextI18Next.initialI18nStore[locale]));
+  
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'projects'])),
+      ...translations,
     },
   }
 }

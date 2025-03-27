@@ -13,8 +13,9 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Head>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
+        <title>{t('meta.title', { defaultValue: 'Privacy Policy - Samir Alibabic' })}</title>
+        <meta name="description" content={t('meta.description', { defaultValue: 'Privacy Policy for Samir Alibabic\'s website' })} />
+        <link rel="canonical" href="https://samiralibabic.com/privacy-policy" />
       </Head>
       <Layout>
 

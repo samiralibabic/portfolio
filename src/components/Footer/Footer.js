@@ -14,7 +14,7 @@ const Footer = () => {
       <LinkList id='contact'>
         <LinkColumn>
           <LinkTitle>{t('footer.email', 'E-Mail')}</LinkTitle>
-          <LinkItem href='kontakt-at-samiralibabic.de'>kontakt-at-samiralibabic.de</LinkItem>
+          <LinkItem>kontakt-at-samiralibabic.de</LinkItem>
         </LinkColumn>
       </LinkList>
 

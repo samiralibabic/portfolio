@@ -21,7 +21,7 @@ export const FooterWrapper = styled.section`
 	}
 `
 
-export const LinkItem = styled.a`
+export const LinkItem = styled.p`
 	font-size: 18px;
 	line-height: 30px;
 	color: rgba(255, 255, 255, 0.75);

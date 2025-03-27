@@ -20,7 +20,7 @@ const Home = () => {
     "@type": "Person",
     "name": "Samir Alibabic",
     "jobTitle": "Software Engineer & Digital Entrepreneur",
-    "url": "https://samiralibabic.com",
+    "url": "https://www.samiralibabic.com",
     "sameAs": [
       "https://github.com/samiralibabic",
       "https://linkedin.com/in/samiralibabic",
@@ -35,10 +35,10 @@ const Home = () => {
         <meta name="description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship.' })} />
         <meta property="og:title" content={t('meta.title', { defaultValue: 'Samir Alibabic - Software Engineer & Digital Entrepreneur' })} />
         <meta property="og:description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship.' })} />
-        <meta property="og:image" content="https://samiralibabic.com/og-image.jpg" />
-        <meta property="og:url" content="https://samiralibabic.com" />
+        <meta property="og:image" content="https://www.samiralibabic.com/og-image.jpg" />
+        <meta property="og:url" content="https://www.samiralibabic.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://samiralibabic.com" />
+        <link rel="canonical" href="https://www.samiralibabic.com" />
       </Head>
       <Layout>
         <JsonLd data={jsonLd} />

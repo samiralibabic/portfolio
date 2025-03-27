@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://samiralibabic.com/sitemap.xml
+# Sitemaps
+Sitemap: https://www.samiralibabic.com/sitemap.xml
+
+# Disallow admin and api routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/

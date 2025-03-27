@@ -15,7 +15,7 @@ const LegalNotice = () => {
       <Head>
         <title>{t('meta.title', { defaultValue: 'Legal Notice - Samir Alibabic' })}</title>
         <meta name="description" content={t('meta.description', { defaultValue: 'Legal Notice for Samir Alibabic\'s website' })} />
-        <link rel="canonical" href="https://samiralibabic.com/legal-notice" />
+        <link rel="canonical" href="https://www.samiralibabic.com/legal-notice" />
       </Head>
       <Layout>
 

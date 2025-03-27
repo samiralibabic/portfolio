@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
-export const CarouselContainer = styled.ul`
+export const CarouselContainer = styled.div`
   max-width: 1040px;
   background: #0F1624;
   padding: 0rem;
-  list-style:none;
   display: flex;
   justify-content: space-between; 
   /* overflow-x: hidden; */
@@ -29,7 +28,7 @@ export const CarouselContainer = styled.ul`
     touch-action: pan-x;
     justify-content: initial;
     margin-bottom: 24px;
-    padding-right: 40px; /* Add padding to prevent scrolling beyond last item */
+    padding-right: 40px;
   }
 
   @media ${props => props.theme.breakpoints.md} {
@@ -42,14 +41,20 @@ export const CarouselContainer = styled.ul`
     padding-right: 24px;
   }
 `
-export const CarouselMobileScrollNode = styled.div`
+export const CarouselMobileScrollNode = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  min-width: ${({ final }) => final ? `100%;` : `min-content`};
+
   @media ${props => props.theme.breakpoints.lg} {
     display: flex;
     min-width: ${({ final }) => final ? `100%;` : `min-content`}
   }
 `
 
-export const CarouselItem = styled.div`
+export const CarouselItem = styled.li`
   background: #0F1624;
   border-radius: 3px;
   max-width: 200px;
@@ -181,9 +186,20 @@ export const CarouselButton = styled.button`
   margin-right: 4px;
   opacity: ${(props) => props.active === props.index ? `1` : `.33`};
   transform: ${(props) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:focus {
     outline: none;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 12px;
   }
 `
 
@@ -193,6 +209,11 @@ export const CarouselButtonDot = styled.div`
   margin: auto;
   width: 3px;
   height: 3px;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    width: 4px;
+    height: 4px;
+  }
 `
 
 export const ProfileSectionContainer = styled.div`

@@ -181,24 +181,21 @@ const Timeline = () => {
         </ProfileTextContainer>
       </ProfilePhotoContainer>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        <>
+        <CarouselMobileScrollNode role="list">
           {TimeLineData.map((item, index) => (
-            <CarouselMobileScrollNode
+            <CarouselItem
               key={index}
-              final={index === TOTAL_CAROUSEL_COUNT - 1}
+              index={index}
+              id={`carousel_item-${index}`}
+              active={activeItem}
+              onClick={(e) => handleClick(e, index)}
+              role="listitem"
             >
-              <CarouselItem
-                index={index}
-                id={`carousel_item-${index}`}
-                active={activeItem}
-                onClick={(e) => handleClick(e, index)}
-              >
-                <CarouselItemTitle>{item.year}</CarouselItemTitle>
-                <CarouselItemText>{t(`timeline.${index}`, { defaultValue: item.text })}</CarouselItemText>
-              </CarouselItem>
-            </CarouselMobileScrollNode>
+              <CarouselItemTitle>{item.year}</CarouselItemTitle>
+              <CarouselItemText>{t(`timeline.${index}`, { defaultValue: item.text })}</CarouselItemText>
+            </CarouselItem>
           ))}
-        </>
+        </CarouselMobileScrollNode>
       </CarouselContainer>
       <CarouselButtons>
         {TimeLineData.map((item, index) => (
@@ -208,6 +205,7 @@ const Timeline = () => {
             active={activeItem}
             onClick={(e) => handleClick(e, index)}
             type="button"
+            aria-label={`Navigate to ${item.year}`}
           >
             <CarouselButtonDot active={activeItem} />
           </CarouselButton>

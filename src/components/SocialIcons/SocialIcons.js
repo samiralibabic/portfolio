@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import { FaMastodon } from 'react-icons/fa';
 import { FaBluesky } from 'react-icons/fa6';
+import { SiBluesky } from 'react-icons/si';
 
 import { SocialIconsContainer, SocialIcon } from './SocialIconsStyles';
 
@@ -27,19 +28,19 @@ const SocialIconsGroup = () => {
 
   return (
     <SocialIconsContainer>
-      <SocialIcon href='https://github.com/samiralibabic' target='_blank'>
+      <SocialIcon href='https://github.com/samiralibabic' target='_blank' rel='noopener noreferrer' aria-label='Visit my GitHub profile'>
         <AiFillGithub size={iconSize} />
       </SocialIcon>
-      <SocialIcon href='https://www.linkedin.com/in/samiralibabic/' target='_blank'>
+      <SocialIcon href='https://www.linkedin.com/in/samiralibabic/' target='_blank' rel='noopener noreferrer' aria-label='Connect with me on LinkedIn'>
         <AiFillLinkedin size={iconSize} />
       </SocialIcon>
-      <SocialIcon href='https://twitter.com/samiralibabic' target='_blank'>
+      <SocialIcon href='https://twitter.com/samiralibabic' target='_blank' rel='noopener noreferrer' aria-label='Follow me on Twitter'>
         <AiFillTwitterCircle size={iconSize} />
       </SocialIcon>
-      <SocialIcon href='https://bsky.app/profile/samiralibabic.bsky.social' target='_blank'>
-        <FaBluesky size={iconSize} />
+      <SocialIcon href='https://bsky.app/profile/samiralibabic.bsky.social' target='_blank' rel='noopener noreferrer' aria-label='Follow me on Bluesky'>
+        <SiBluesky size={iconSize} />
       </SocialIcon>
-      <SocialIcon rel="me" href='https://mastodon.social/@samiralibabic' target='_blank'>
+      <SocialIcon href='https://mastodon.social/@samiralibabic' target='_blank' rel='me noopener noreferrer' aria-label='Follow me on Mastodon'>
         <FaMastodon size={iconSize} />
       </SocialIcon>
     </SocialIconsContainer>

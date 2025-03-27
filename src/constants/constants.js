@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'LinkTracker',
     description: 'A platform to organize, track, and analyze the performance of shared links.',
-    image: '/images/linktracker.png',
+    image: '/images/linktracker.webp',
     tags: ['SaaS', 'Link Management'],
     visit: 'https://linktracker.info',
     id: 0,
@@ -10,7 +10,7 @@ export const projects = [
   {
     title: 'hashion',
     description: 'Turn your Hashnode blog into a Notion database and manage it with everything else.',
-    image: '/images/hashion.png',
+    image: '/images/hashion.webp',
     tags: ['Blogging', 'Notion', 'Hashnode'],
     visit: 'https://hashion.link',
     id: 1,
@@ -18,7 +18,7 @@ export const projects = [
   {
     title: 'LustigeDruckShirts',
     description: 'A Print-On-Demand shop for humorous T-shirts and bags in the German market.',
-    image: '/images/lustigedruckshirts.png',
+    image: '/images/lustigedruckshirts.webp',
     tags: ['Print-On-Demand', 'E-commerce'],
     visit: 'https://lustigedruckshirts.de',
     id: 2,
@@ -26,7 +26,7 @@ export const projects = [
   {
     title: 'Reise Prints',
     description: 'A Print-On-Demand shop for travel-related products in the German market.',
-    image: '/images/reiseprints.png',
+    image: '/images/reiseprints.webp',
     tags: ['Print-On-Demand', 'Travel'],
     visit: 'https://reiseprints.de',
     id: 3,
@@ -34,7 +34,7 @@ export const projects = [
   {
     title: 'Hunde & Katzen Druck',
     description: 'A Print-On-Demand shop for dog and cat lovers in the German market.',
-    image: '/images/hundekatzendruck.png',
+    image: '/images/hundekatzendruck.webp',
     tags: ['Print-On-Demand', 'E-commerce'],
     visit: 'https://hundekatzendruck.de',
     id: 4,
@@ -42,7 +42,7 @@ export const projects = [
   {
     title: 'Retro Heim & Leben',
     description: 'A Print-On-Demand shop for retro-style home and decorations in the German market.',
-    image: '/images/retroheimundleben.png',
+    image: '/images/retroheimundleben.webp',
     tags: ['Print-On-Demand', 'Home Decor'],
     visit: 'https://retroheimundleben.de',
     id: 5,
@@ -50,7 +50,7 @@ export const projects = [
   {
     title: 'Personalisierte Babykleidung',
     description: 'A Print-On-Demand shop for baby products in the German market.',
-    image: '/images/personalisiertebabykleidung.png',
+    image: '/images/personalisiertebabykleidung.webp',
     tags: ['Print-On-Demand', 'Baby Products'],
     visit: 'https://personalisiertebabykleidung.de',
     id: 6,
@@ -58,7 +58,7 @@ export const projects = [
   {
     title: 'Notion Template (MDW)',
     description: "A Notion template for Noah Kagan's book \"Million Dollar Weekend.\"",
-    image: '/images/notion-template.png',
+    image: '/images/notion-template.webp',
     tags: ['Notion', 'Templates'],
     visit: 'https://www.notion.so/templates/million-dollar-weekend-workbook',
     id: 7,
@@ -66,7 +66,7 @@ export const projects = [
   {
     title: 'Print2Social',
     description: 'An AI-powered social media manager for Print-On-Demand businesses.',
-    image: '/images/print2social.png',
+    image: '/images/print2social.webp',
     tags: ['SaaS', 'Automation', 'Print-On-Demand'],
     visit: 'https://print2social.com',
     id: 8,
@@ -74,7 +74,7 @@ export const projects = [
   {
     title: 'Lustige Sprüche',
     description: 'A niche German website with funny slogans and jokes that drives traffic to other ventures.',
-    image: '/images/lustigesprueche.png',
+    image: '/images/lustigesprueche.webp',
     tags: ['SEO', 'Blogging', 'Humor'],
     visit: 'https://lustigesprueche.online',
     id: 9,
@@ -82,7 +82,7 @@ export const projects = [
   {
     title: 'WebCrawler',
     description: 'A web crawler to gather external links from any page or entire domain.',
-    image: '/images/webcrawler.png',
+    image: '/images/webcrawler.webp',
     tags: ['Web Crawling', 'Link Building'],
     visit: 'https://crawler.samiralibabic.com',
     id: 10,
@@ -90,7 +90,7 @@ export const projects = [
   {
     title: 'Affiliate Companies',
     description: 'Discover the top affiliate programs with excellent earning potential.',
-    image: '/images/affiliatecompanies.png',
+    image: '/images/affiliatecompanies.webp',
     tags: ['Affiliate Marketing', 'Directory'],
     visit: 'https://affiliatecompanies.net',
     id: 11,
@@ -98,7 +98,7 @@ export const projects = [
   {
     title: 'Print On Demand Business',
     description: 'A comprehensive directory of suppliers for your print-on-demand businesses.',
-    image: '/images/printondemandbusiness.png',
+    image: '/images/printondemandbusiness.webp',
     tags: ['Print-On-Demand', 'Directory'],
     visit: 'https://printondemandbusiness.com',
     id: 12,

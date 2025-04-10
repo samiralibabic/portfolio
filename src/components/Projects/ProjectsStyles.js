@@ -137,3 +137,29 @@ export const Tag = styled.li`
   border-radius: 20px;
   list-style: none;
 `
+
+export const ProjectStatusBanner = styled.div`
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  color: white;
+  padding: 3px 30px;
+  transform: rotate(45deg);
+  font-weight: bold;
+  z-index: 2;
+  font-size: 10px;
+  letter-spacing: 1px;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  min-width: 150px;
+  background-color: ${props => {
+    switch (props.status) {
+      case 'discontinued':
+        return '#FF0000';
+      case 'sold':
+        return '#00A86B';
+      default:
+        return '#FF0000';
+    }
+  }};
+`

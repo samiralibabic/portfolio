@@ -2,69 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Masonry from 'react-masonry-css';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
-import { BlogCard, CardInfo, HeaderThree, Hr, Tag, TagList, TitleContent, ImgOverlay } from './ProjectsStyles';
+import { BlogCard, CardInfo, HeaderThree, Hr, Tag, TagList, TitleContent, ImgOverlay, ProjectStatusBanner } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
-
-// Simplified custom CSS for the discontinued banner
-const customStyles = `
-  .discontinued-banner {
-    position: absolute;
-    top: 30px;
-    right: -30px;
-    background-color: #FF0000;
-    color: white;
-    padding: 3px 30px;
-    transform: rotate(45deg);
-    font-weight: bold;
-    z-index: 2;
-    font-size: 10px;
-    letter-spacing: 1px;
-    pointer-events: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  }
-  
-  .my-masonry-grid {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .my-masonry-grid_column {
-    padding-left: 20px; /* gutter size */
-    background-clip: padding-box;
-  }
-  
-  /* Style your items */
-  .my-masonry-grid_column > div {
-    margin-bottom: 30px;
-  }
-  
-  @media (max-width: 1024px) {
-    .my-masonry-grid {
-      margin: 0 auto;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .my-masonry-grid_column {
-      padding-left: 15px;
-    }
-    .my-masonry-grid_column > div {
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .my-masonry-grid_column {
-      padding-left: 0;
-    }
-    .my-masonry-grid_column > div {
-      margin-bottom: 15px;
-    }
-  }
-`;
 
 // Masonry breakpoints
 const breakpointColumnsObj = {
@@ -83,24 +23,19 @@ const containerStyle = {
   padding: '0'
 };
 
-// Hardcoded list of discontinued project IDs based on translation files
-const DISCONTINUED_PROJECT_IDS = [1, 6]; // IDs from the translation files
+// Hardcoded list of discontinued and sold project IDs
+const DISCONTINUED_PROJECT_IDS = [1, 6];
+const SOLD_PROJECT_IDS = [11]; // affiliatecompanies.net
 
 const Projects = () => {
   const { t, i18n } = useTranslation(['common', 'projects']);
   const [discontinuedProjects, setDiscontinuedProjects] = useState(DISCONTINUED_PROJECT_IDS);
+  const [soldProjects, setSoldProjects] = useState(SOLD_PROJECT_IDS);
   
   useEffect(() => {
     // Force re-render when language changes
     setDiscontinuedProjects([...DISCONTINUED_PROJECT_IDS]);
-    
-    // Add custom CSS to the document
-    if (!document.getElementById('discontinued-banner-styles')) {
-      const styleElement = document.createElement('style');
-      styleElement.id = 'discontinued-banner-styles';
-      styleElement.innerHTML = customStyles;
-      document.head.appendChild(styleElement);
-    }
+    setSoldProjects([...SOLD_PROJECT_IDS]);
   }, [i18n.language]);
   
   return (
@@ -114,13 +49,14 @@ const Projects = () => {
           columnClassName="my-masonry-grid_column"
         >
           {projects.slice().reverse().map(({ id, image, title, description, tags, visit }) => {
-            // Check if this project is in our hardcoded discontinued list
+            // Check project status
             const isDiscontinued = discontinuedProjects.includes(id);
+            const isSold = soldProjects.includes(id);
             
             // Get translated description with correct path
             const translatedDescription = t(`projects:projects.${id}.description`, { defaultValue: description });
             
-            // Clean description text by removing the discontinued tag
+            // Clean description text by removing status tags
             const cleanDescription = translatedDescription
               .replace('[DISCONTINUED]', '')
               .replace('[EINGESTELLT]', '')
@@ -128,15 +64,22 @@ const Projects = () => {
             
             return (
               <BlogCard key={id}>
-                {/* Wrap the entire card in a link if not discontinued */}
-                {isDiscontinued ? (
+                {/* Status banner */}
+                {isDiscontinued && (
+                  <ProjectStatusBanner status="discontinued">
+                    {t('common:projects.discontinued')}
+                  </ProjectStatusBanner>
+                )}
+                {isSold && (
+                  <ProjectStatusBanner status="sold">
+                    {t('common:projects.sold')}
+                  </ProjectStatusBanner>
+                )}
+                
+                {/* Wrap the entire card in a link if not discontinued or sold */}
+                {(isDiscontinued || isSold) ? (
                   <>
-                    {/* Discontinued banner */}
-                    <div className="discontinued-banner">
-                      {t('common:projects.discontinued', 'DISCONTINUED')}
-                    </div>
-                    
-                    {/* Image with grayscale for discontinued projects */}
+                    {/* Image with grayscale for discontinued/sold projects */}
                     {image && (
                       <ImgOverlay>
                         <div style={{ position: 'relative', width: '100%', height: '200px' }}>

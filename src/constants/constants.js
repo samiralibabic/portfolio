@@ -102,6 +102,22 @@ export const projects = [
     tags: ['Print-On-Demand', 'Directory'],
     visit: 'https://printondemandbusiness.com',
     id: 12,
+  },
+  {
+    title: 'Tierarzt-Liste',
+    description: 'A comprehensive veterinarian directory for Germany with over 1849 veterinarians in 1057 practices and clinics.',
+    image: '/images/tierarzt-liste.webp',
+    tags: ['Directory', 'Healthcare', 'Veterinary'],
+    visit: 'https://tierarzt-liste.de',
+    id: 13,
+  },
+  {
+    title: 'ClipClean',
+    description: 'An AI-powered audio cleaning service that removes filler words and awkward pauses from podcasts and recordings.',
+    image: '/images/clipclean.webp',
+    tags: ['SaaS', 'AI', 'Audio Processing'],
+    visit: 'https://clipclean.eu',
+    id: 14,
   }
 ];
 

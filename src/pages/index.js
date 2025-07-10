@@ -58,13 +58,9 @@ const Home = () => {
 
 // This function gets called at build time on server-side
 export async function getStaticProps({ locale }) {
-  const translations = await serverSideTranslations(locale, ['common', 'projects']);
-  console.log('Building page for locale:', locale);
-  console.log('Translations loaded:', Object.keys(translations._nextI18Next.initialI18nStore[locale]));
-  
   return {
     props: {
-      ...translations,
+      ...(await serverSideTranslations(locale, ['common', 'projects'])),
     },
   }
 }

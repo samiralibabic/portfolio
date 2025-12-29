@@ -24,7 +24,7 @@ const containerStyle = {
 };
 
 // Hardcoded list of discontinued and sold project IDs
-const DISCONTINUED_PROJECT_IDS = [1, 6];
+const DISCONTINUED_PROJECT_IDS = [1, 4, 6];
 const SOLD_PROJECT_IDS = [11]; // affiliatecompanies.net
 
 const Projects = () => {

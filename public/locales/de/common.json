@@ -24,7 +24,11 @@
     "subtitle": "Sehen Sie sich einige meiner neuesten Arbeiten an",
     "visit": "Besuchen",
     "discontinued": "EINGESTELLT",
-    "sold": "AKQUIRIERT"
+    "sold": "AKQUIRIERT",
+    "showMore": "Mehr Projekte anzeigen",
+    "showLess": "Weniger Projekte anzeigen",
+    "utilities": "Tools",
+    "inactive": "Inaktiv"
   },
   "technologies": {
     "title": "Technologien",

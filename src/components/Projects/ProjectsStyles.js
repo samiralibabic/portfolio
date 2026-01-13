@@ -163,3 +163,43 @@ export const ProjectStatusBanner = styled.div`
     }
   }};
 `
+
+export const ProjectsControlsRow = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 0;
+`;
+
+export const ProjectGroupsWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 28px auto 0;
+`;
+
+export const ProjectGroupDetails = styled.details`
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px 14px;
+  margin-bottom: 14px;
+`;
+
+export const ProjectGroupSummary = styled.summary`
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.92);
+  padding: 6px 2px;
+  user-select: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+`;
+
+export const ProjectGroupContent = styled.div`
+  margin-top: 16px;
+`;

@@ -24,7 +24,11 @@
     "subtitle": "Check out some of my recent work",
     "visit": "Visit",
     "discontinued": "DISCONTINUED",
-    "sold": "ACQUIRED"
+    "sold": "ACQUIRED",
+    "showMore": "Show more projects",
+    "showLess": "Show fewer projects",
+    "utilities": "Utilities",
+    "inactive": "Inactive"
   },
   "technologies": {
     "title": "Technologies",

@@ -1,12 +1,22 @@
 {
   "meta": {
-    "title": "Samir Alibabic - Software Engineer & Digital Entrepreneur",
-    "description": "Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship."
+    "title": "Samir Alibabic - Software Engineer & Solo Founder",
+    "description": "I build and operate software products end-to-end — from code & data to distribution. Focus: organic growth (SEO/content/community) and clear, measurable systems."
   },
   "hero": {
-    "title": "Software Engineer & Digital Entrepreneur",
-    "intro": "I build and scale digital products that help businesses grow. Explore my portfolio of SaaS tools, directories, and e-commerce ventures delivering value to thousands of users and partners worldwide.",
-    "contact": "Contact me"
+    "title": "Software Engineer & Solo Founder",
+    "intro": "I build and operate software products end-to-end — from code & data to distribution.",
+    "introSecondLine": "Focus: organic growth (SEO/content/community) and clear, measurable systems.",
+    "contact": "Contact",
+    "exploreProducts": "Explore products",
+    "readBlog": "Read the blog",
+    "proofChips": {
+      "mau": "4.2k+ MAU across active products",
+      "solo": "Solo since 2024",
+      "valtech": "Valtech (2016–2022)",
+      "germany": "Germany",
+      "since": "Building since 2009"
+    }
   },
   "navigation": {
     "projects": "Projects",
@@ -32,7 +42,8 @@
   },
   "technologies": {
     "title": "Technologies",
-    "subtitle": "Over the course of my career, I have worked with a wide range of technologies, with different levels of proficiency, but nowadays I mostly ship fast with no-code/low-code tools and AI.",
+    "subtitle": "I use the right tool for the job — with a focus on speed, reliability, and measurable outcomes.",
+    "subtitleSecondLine": "Technology is a means to an end: delivery, quality, and growth come first.",
     "frontend": "Front-End",
     "backend": "Back-End",
     "devops": "DevOps",
@@ -71,11 +82,31 @@
   "about": {
     "title": "About Me",
     "subtitle": "My background and journey",
-    "ageText": "Since I've been born {{years}} years, {{months}} months, {{days}} days, {{hours}} hours, {{minutes}} minutes, and {{seconds}} seconds ago, I've managed to accomplish the following:"
+    "bioLine1": "I've been building software since 2009 and have been operating products as a solo founder since 2024.",
+    "bioLine2": "Previously: Software Engineer at Valtech (2016–2022).",
+    "bioLine3": "Today: organic growth, clear systems, and products with their own distribution."
   },
   "testimonials": {
     "title": "Testimonials",
     "subtitle": "What people say about my work"
+  },
+  "outcomes": {
+    "title": "Selected Outcomes",
+    "mau": "4.2k+ MAU across active products",
+    "portfolio": "Portfolio: software products, directories & tools",
+    "experience": "Solo since 2024 · Valtech 2016–2022"
+  },
+  "contact": {
+    "sendEmail": "Send email",
+    "pleaseInclude": "Please include:",
+    "whatAbout": "What is this about?",
+    "linkProduct": "Link/product",
+    "nextStep": "Desired next step"
+  },
+  "now": {
+    "title": "Now",
+    "focus": "Now: focused on PODB & Tierarzt-Liste (growth + monetization).",
+    "openTo": "Open to: sponsorships, integrations, partnerships."
   },
   "footer": {
     "privacy": "Privacy Policy",

@@ -1,12 +1,22 @@
 {
   "meta": {
-    "title": "Samir Alibabic - Software-Ingenieur & Digital Unternehmer",
-    "description": "Portfolio von Samir Alibabic - Präsentation von Projekten und Fähigkeiten im Bereich Software-Engineering, Indie-Hacking und Unternehmertum."
+    "title": "Samir Alibabic - Software-Ingenieur & Solo-Entrepreneur",
+    "description": "Ich baue und betreibe Software-Produkte end-to-end – von Code & Daten bis Distribution. Fokus: organisches Wachstum (SEO/Content/Community) und klare, messbare Systeme."
   },
   "hero": {
-    "title": "Software-Ingenieur & Digital Unternehmer",
-    "intro": "Ich entwickle und skaliere digitale Produkte, die Unternehmen beim Wachstum helfen. Entdecken Sie mein Portfolio aus SaaS-Tools, Verzeichnissen und E-Commerce-Ventures, die tausenden von Nutzern und Partnern weltweit Mehrwert bieten.",
-    "contact": "Kontaktieren Sie mich"
+    "title": "Software-Ingenieur & Solo-Entrepreneur",
+    "intro": "Ich baue und betreibe Software-Produkte end-to-end – von Code & Daten bis Distribution.",
+    "introSecondLine": "Fokus: organisches Wachstum (SEO/Content/Community) und klare, messbare Systeme.",
+    "contact": "Kontakt",
+    "exploreProducts": "Produkte ansehen",
+    "readBlog": "Blog lesen",
+    "proofChips": {
+      "mau": "4.2k+ MAU über aktive Produkte",
+      "solo": "Solo seit 2024",
+      "valtech": "Valtech (2016–2022)",
+      "germany": "Deutschland",
+      "since": "Seit 2009 in Software"
+    }
   },
   "navigation": {
     "projects": "Projekte",
@@ -32,7 +42,8 @@
   },
   "technologies": {
     "title": "Technologien",
-    "subtitle": "Im Laufe meiner Karriere habe ich mit einer Vielzahl von Technologien auf unterschiedlichen Kompetenzniveaus gearbeitet, aber heutzutage setze ich hauptsächlich auf schnelle Entwicklung mit No-Code/Low-Code-Tools und KI.",
+    "subtitle": "Ich nutze das passende Werkzeug für den Job – Fokus auf schnelle Umsetzung, Zuverlässigkeit und messbare Ergebnisse.",
+    "subtitleSecondLine": "Technologie ist Mittel zum Zweck: Delivery, Qualität und Wachstum stehen im Vordergrund.",
     "frontend": "Front-End",
     "backend": "Back-End",
     "devops": "DevOps",
@@ -71,11 +82,31 @@
   "about": {
     "title": "Über Mich",
     "subtitle": "Mein Hintergrund und meine Reise",
-    "ageText": "Seit ich vor {{years}} Jahren, {{months}} Monaten, {{days}} Tagen, {{hours}} Stunden, {{minutes}} Minuten und {{seconds}} Sekunden geboren wurde, habe ich Folgendes erreicht:"
+    "bioLine1": "Ich entwickle seit 2009 Software und baue seit 2024 Produkte als Solo-Unternehmer.",
+    "bioLine2": "Davor: Software Engineer bei Valtech (2016–2022).",
+    "bioLine3": "Heute: organisches Wachstum, klare Systeme und Produkte mit eigener Distribution."
   },
   "testimonials": {
     "title": "Referenzen",
     "subtitle": "Was andere über meine Arbeit sagen"
+  },
+  "outcomes": {
+    "title": "Ausgewählte Ergebnisse",
+    "mau": "4.2k+ MAU über aktive Produkte",
+    "portfolio": "Portfolio: Software-Produkte, Verzeichnisse & Tools",
+    "experience": "Solo seit 2024 · Valtech 2016–2022"
+  },
+  "contact": {
+    "sendEmail": "E-Mail senden",
+    "pleaseInclude": "Bitte mitschicken:",
+    "whatAbout": "Worum geht's?",
+    "linkProduct": "Link/Produkt",
+    "nextStep": "Gewünschter nächster Schritt"
+  },
+  "now": {
+    "title": "Aktuell",
+    "focus": "Aktuell: Fokus auf PODB & Tierarzt-Liste (Wachstum + Monetarisierung).",
+    "openTo": "Offen für: Sponsorships, Integrationen, Partnerschaften."
   },
   "footer": {
     "privacy": "Datenschutzerklärung",

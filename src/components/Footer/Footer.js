@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import SocialIconsGroup from '../SocialIcons/SocialIcons';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer } from './FooterStyles';
+import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer, ContactButton, ContactHints, ContactHintItem, ContactSection, NowSection, NowText } from './FooterStyles';
 
 const Footer = () => {
   const { t } = useTranslation('common');
@@ -12,10 +12,25 @@ const Footer = () => {
     <FooterWrapper>
 
       <LinkList id='contact'>
-        <LinkColumn>
+        <ContactSection>
           <LinkTitle>{t('footer.email', 'E-Mail')}</LinkTitle>
           <LinkItem>kontakt-at-samiralibabic.de</LinkItem>
-        </LinkColumn>
+          <ContactButton href="mailto:kontakt@samiralibabic.de">
+            {t('contact.sendEmail')}
+          </ContactButton>
+          <ContactHints>
+            <span style={{ fontWeight: 500, marginBottom: '8px', display: 'block' }}>{t('contact.pleaseInclude')}</span>
+            <ContactHintItem>• {t('contact.whatAbout')}</ContactHintItem>
+            <ContactHintItem>• {t('contact.linkProduct')}</ContactHintItem>
+            <ContactHintItem>• {t('contact.nextStep')}</ContactHintItem>
+          </ContactHints>
+        </ContactSection>
+        
+        <NowSection>
+          <LinkTitle>{t('now.title')}</LinkTitle>
+          <NowText>{t('now.focus')}</NowText>
+          <NowText>{t('now.openTo')}</NowText>
+        </NowSection>
       </LinkList>
 
       <SocialIconsContainer>

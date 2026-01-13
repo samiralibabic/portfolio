@@ -189,3 +189,88 @@ export const LegalNavLink = styled(NavLink)`
 		align-items: center;
 	}
 `
+
+export const ContactSection = styled.div`
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	width: 100%;
+`
+
+export const ContactButton = styled.a`
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+	border: none;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin: 16px 0;
+	width: fit-content;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 20px rgba(19, 173, 199, 0.4);
+	}
+
+	@media ${props => props.theme.breakpoints.sm} {
+		padding: 10px 20px;
+		font-size: 14px;
+		width: 100%;
+		justify-content: center;
+	}
+`
+
+export const ContactHints = styled.div`
+	margin-top: 8px;
+	padding: 12px;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+
+	@media ${props => props.theme.breakpoints.sm} {
+		padding: 10px;
+	}
+`
+
+export const ContactHintItem = styled.p`
+	font-size: 14px;
+	line-height: 22px;
+	color: rgba(255, 255, 255, 0.65);
+	margin: 4px 0;
+
+	@media ${props => props.theme.breakpoints.sm} {
+		font-size: 12px;
+		line-height: 18px;
+	}
+`
+
+export const NowSection = styled.div`
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	width: 100%;
+`
+
+export const NowText = styled.p`
+	font-size: 16px;
+	line-height: 26px;
+	color: rgba(255, 255, 255, 0.75);
+	margin-bottom: 8px;
+
+	@media ${props => props.theme.breakpoints.md} {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	@media ${props => props.theme.breakpoints.sm} {
+		font-size: 13px;
+		line-height: 20px;
+	}
+`

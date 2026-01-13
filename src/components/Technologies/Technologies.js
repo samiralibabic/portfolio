@@ -56,6 +56,8 @@ const Technologies = () => {
       <SectionTitle main>{t('technologies.title')}</SectionTitle>
       <SectionText>
         {t('technologies.subtitle')}
+        <br />
+        <span style={{ opacity: 0.9 }}>{t('technologies.subtitleSecondLine')}</span>
       </SectionText>
       <div style={containerStyle}>
         <TechGridContainer>

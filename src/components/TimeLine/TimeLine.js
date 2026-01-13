@@ -26,41 +26,9 @@ import { TimeLineData } from "../../constants/constants";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
-const calculateAge = (birthDate) => {
-  const today = new Date();
-  const birthDateObj = new Date(birthDate);
-
-  let years = today.getFullYear() - birthDateObj.getFullYear();
-  let months = today.getMonth() - birthDateObj.getMonth();
-  let days = today.getDate() - birthDateObj.getDate();
-  const hours = today.getHours() - birthDateObj.getHours();
-  const minutes = today.getMinutes() - birthDateObj.getMinutes();
-  const seconds = today.getSeconds() - birthDateObj.getSeconds();
-  // If the current day of the month is less than the birth day, subtract one month
-  if (days < 0) {
-    months--;
-    // Calculate the number of days remaining in the previous month
-    const daysInPrevMonth = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      0
-    ).getDate();
-    days += daysInPrevMonth;
-  }
-
-  // If the current month is less than the birth month, subtract one year
-  if (months < 0) {
-    years--;
-    months += 12;
-  }
-
-  return { years, months, days, hours, minutes, seconds };
-};
-
 const Timeline = () => {
   const { t } = useTranslation('common');
   const [activeItem, setActiveItem] = useState(0);
-  const [age, setAge] = useState(null);
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
@@ -120,17 +88,6 @@ const Timeline = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setAge(calculateAge('1984-10-16'));
-    const interval = setInterval(() => {
-      setAge(calculateAge('1984-10-16'));
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   // Ensure the carousel is properly initialized
   useEffect(() => {
     if (carouselRef.current) {
@@ -166,18 +123,13 @@ const Timeline = () => {
         </div>
         
         <ProfileTextContainer>
-          <ProfileSectionText
-            dangerouslySetInnerHTML={age && {
-              __html: t('about.ageText', {
-                years: age.years,
-                months: age.months,
-                days: age.days,
-                hours: age.hours,
-                minutes: age.minutes,
-                seconds: age.seconds,
-                defaultValue: `Since I've been born ${age.years} years, ${age.months} months, ${age.days} days, ${age.hours} hours, ${age.minutes} minutes, and ${age.seconds} seconds ago, I've managed to accomplish the following:`
-              }),
-            }}/>
+          <ProfileSectionText>
+            {t('about.bioLine1')}
+            <br />
+            {t('about.bioLine2')}
+            <br />
+            {t('about.bioLine3')}
+          </ProfileSectionText>
         </ProfileTextContainer>
       </ProfilePhotoContainer>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>

@@ -1,6 +1,7 @@
 import Acomplishments from '../components/Acomplishments/Acomplishments';
 import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
+import OutcomesStrip from '../components/OutcomesStrip/OutcomesStrip';
 import Projects from '../components/Projects/Projects';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Technologies from '../components/Technologies/Technologies';
@@ -19,7 +20,7 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Samir Alibabic",
-    "jobTitle": "Software Engineer & Digital Entrepreneur",
+    "jobTitle": "Software Engineer & Solo Founder",
     "url": "https://www.samiralibabic.com",
     "sameAs": [
       "https://github.com/samiralibabic",
@@ -46,6 +47,7 @@ const Home = () => {
           <Hero />
           <BgAnimation />
         </Section>
+        <OutcomesStrip />
         <Projects />
         <Technologies />
         <Timeline />

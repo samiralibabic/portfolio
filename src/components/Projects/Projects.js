@@ -44,7 +44,7 @@ const containerStyle = {
 // LinkTracker (id: 0) is also discontinued.
 const DISCONTINUED_PROJECT_IDS = [0, 1, 3, 4, 5, 6];
 const SOLD_PROJECT_IDS = [11]; // affiliatecompanies.net
-const FEATURED_PROJECT_IDS = [2, 8, 12, 13, 14]; // lustigedruckshirts.de, print2social, PODB, tierarzt-liste, clipclean
+const FEATURED_PROJECT_IDS = [12, 13, 8, 2]; // PODB, tierarzt-liste, print2social, lustigedruckshirts.de - ClipClean moved to utilities
 
 const Projects = () => {
   const { t, i18n } = useTranslation(['common', 'projects']);

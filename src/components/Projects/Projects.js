@@ -24,7 +24,9 @@ const containerStyle = {
 };
 
 // Hardcoded list of discontinued and sold project IDs
-const DISCONTINUED_PROJECT_IDS = [1, 4, 6];
+// POD stores are 2–6; only lustigedruckshirts.de (id: 2) is still active.
+// LinkTracker (id: 0) is also discontinued.
+const DISCONTINUED_PROJECT_IDS = [0, 1, 3, 4, 5, 6];
 const SOLD_PROJECT_IDS = [11]; // affiliatecompanies.net
 
 const Projects = () => {

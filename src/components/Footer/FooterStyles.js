@@ -29,7 +29,7 @@ export const LinkItem = styled.p`
 	transition: .3s ease;
 	position: relative;
 	left: 0;
-	white-space: nowrap;
+	word-break: break-word;
 
 	&:hover {
 		color: #fff;
@@ -44,7 +44,7 @@ export const LinkItem = styled.p`
 
 	@media ${props => props.theme.breakpoints.sm} {
 		font-size: 14px;
-		line-height: 14px;
+		line-height: 20px;
 		margin-bottom: 8px;
 		display: flex;
 		align-items: center;
@@ -124,24 +124,27 @@ export const SocialContainer = styled.div`
 
 export const LinkList = styled.ul`
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: grid;
-	grid-template-columns: repeat(3, minmax(85px, 220px));
+	display: flex;
+	flex-wrap: wrap;
 	gap: 40px;
-  padding: 40px 0 28px;
+	padding: 40px 0 28px;
 
 	@media ${props => props.theme.breakpoints.lg} {
 		padding: 32px 0 16px;
+		gap: 32px;
 	}
 
 	@media ${props => props.theme.breakpoints.md} {
 		width: 100%;
 		padding: 32px 0 16px;
-		gap: 16px;
+		gap: 24px;
 	}
+	
 	@media ${props => props.theme.breakpoints.sm} {
 		width: 100%;
-		padding: 32px 4px 16px;
-		gap: 5px;
+		padding: 24px 0 16px;
+		flex-direction: column;
+		gap: 24px;
 	}
 `
 
@@ -193,8 +196,13 @@ export const LegalNavLink = styled(NavLink)`
 export const ContactSection = styled.div`
 	display: flex;
 	flex-direction: column;
-	max-width: 300px;
+	max-width: 320px;
 	width: 100%;
+	flex-shrink: 0;
+	
+	@media ${props => props.theme.breakpoints.sm} {
+		max-width: 100%;
+	}
 `
 
 export const ContactButton = styled.a`
@@ -256,6 +264,11 @@ export const NowSection = styled.div`
 	flex-direction: column;
 	max-width: 400px;
 	width: 100%;
+	flex-shrink: 0;
+	
+	@media ${props => props.theme.breakpoints.sm} {
+		max-width: 100%;
+	}
 `
 
 export const NowText = styled.p`

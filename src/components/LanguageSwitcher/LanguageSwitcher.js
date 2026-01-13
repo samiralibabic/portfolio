@@ -58,11 +58,13 @@ const LanguageContainer = styled.div`
 const LanguageSwitcher = () => {
   const router = useRouter();
   const { t } = useTranslation('common');
-  const { pathname, asPath, query } = router;
+  const { pathname, query } = router;
 
   const changeLanguage = (locale) => {
+    // Strip hash fragments to prevent page jumping on language switch
+    const pathWithoutHash = pathname.split('#')[0];
     // Let Next.js handle domain routing via next-i18next.config.js
-    router.push(pathname, asPath, { locale });
+    router.push({ pathname: pathWithoutHash, query }, undefined, { locale, scroll: false });
   };
 
   return (

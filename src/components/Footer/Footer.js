@@ -7,6 +7,16 @@ import { BuildDetailsLink, CompanyContainer, FooterWrapper, LinkItem, LinkList, 
 
 const Footer = () => {
   const { t } = useTranslation('common');
+
+  const handleBuildDetailsClick = () => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const nextUrl = `${window.location.pathname}${window.location.search}#build-details`;
+    window.history.replaceState({}, document.title, nextUrl);
+    window.dispatchEvent(new CustomEvent('build-details:open'));
+  };
   
   return (
     <FooterWrapper>
@@ -35,9 +45,9 @@ const Footer = () => {
 
       <SocialIconsContainer>
         <CompanyContainer>
-          <Link href="#build-details" scroll={false}>
-            <BuildDetailsLink>Build details</BuildDetailsLink>
-          </Link>
+          <BuildDetailsLink as="button" type="button" onClick={handleBuildDetailsClick}>
+            Build details
+          </BuildDetailsLink>
         </CompanyContainer>
         <SocialIconsGroup />
       </SocialIconsContainer>

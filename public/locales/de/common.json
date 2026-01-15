@@ -20,7 +20,7 @@
   },
   "navigation": {
     "projects": "Produkte",
-    "technologies": "Build details",
+    "technologies": "Technische Details",
     "about": "Über mich",
     "testimonials": "Referenzen",
     "contact": "Kontakt",
@@ -39,6 +39,10 @@
     "showLess": "Weniger Produkte anzeigen",
     "utilities": "Tools",
     "inactive": "Inaktiv"
+  },
+  "buildDetails": {
+    "title": "Technische Details",
+    "close": "Technische Details schließen"
   },
   "technologies": {
     "title": "Technologien",

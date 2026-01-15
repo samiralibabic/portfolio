@@ -40,6 +40,10 @@
     "utilities": "Utilities",
     "inactive": "Inactive"
   },
+  "buildDetails": {
+    "title": "Build details",
+    "close": "Close build details"
+  },
   "technologies": {
     "title": "Technologies",
     "subtitle": "I use the right tool for the job — with a focus on speed, reliability, and measurable outcomes.",

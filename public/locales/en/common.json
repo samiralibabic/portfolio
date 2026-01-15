@@ -42,7 +42,15 @@
   },
   "buildDetails": {
     "title": "Build details",
-    "close": "Close build details"
+    "close": "Close build details",
+    "intro": "I build and run digital products end-to-end — from idea to production. I’m not tied to a specific tech stack; tools are chosen based on what the problem needs.",
+    "list": {
+      "plan": "What I do: plan, build, operate, measure, improve",
+      "workStyle": "How I work: pragmatic, fast, focused on outcomes",
+      "usually": "Usually today: web products (often TypeScript)",
+      "also": "Also: mobile/desktop/embedded when it’s the right interface"
+    },
+    "note": "Implementation can be AI-assisted — responsibility, decisions, and review are mine."
   },
   "technologies": {
     "title": "Technologies",

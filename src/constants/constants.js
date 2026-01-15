@@ -88,6 +88,14 @@ export const projects = [
     id: 10,
   },
   {
+    title: 'Monitor',
+    description: 'A monitoring tool for uptime and performance checks on websites and services.',
+    image: '/images/monitor.svg',
+    tags: ['Monitoring', 'Utilities'],
+    visit: 'https://monitor.samiralibabic.com',
+    id: 15,
+  },
+  {
     title: 'Affiliate Companies',
     description: 'Discover the top affiliate programs with excellent earning potential.',
     image: '/images/affiliatecompanies.webp',

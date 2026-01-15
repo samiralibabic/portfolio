@@ -45,6 +45,9 @@
     },
     "14": {
       "description": "Ein KI-gestützter Audio-Bereinigungsservice, der Füllwörter und peinliche Pausen aus Podcasts und Aufnahmen entfernt."
+    },
+    "15": {
+      "description": "Ein Monitoring-Tool für Verfügbarkeits- und Performance-Prüfungen von Websites und Services."
     }
   }
-} 
+}

@@ -46,7 +46,7 @@ const Footer = () => {
       <SocialIconsContainer>
         <CompanyContainer>
           <BuildDetailsLink as="button" type="button" onClick={handleBuildDetailsClick}>
-            Build details
+            {t('buildDetails.title', 'Build details')}
           </BuildDetailsLink>
         </CompanyContainer>
         <SocialIconsGroup />

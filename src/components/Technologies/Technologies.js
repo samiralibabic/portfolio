@@ -1,4 +1,5 @@
 import React, { useEffect, useId, useState } from 'react';
+import { useTranslation } from 'next-i18next';
 import { Section } from '../../styles/GlobalComponents';
 import {
   CloseButton,
@@ -16,6 +17,7 @@ import {
 const Technologies = () => {
   const [isOpen, setIsOpen] = useState(false);
   const titleId = useId();
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -79,8 +81,12 @@ const Technologies = () => {
             onClick={(event) => event.stopPropagation()}
           >
             <DrawerHeader>
-              <DrawerTitle id={titleId}>Build details</DrawerTitle>
-              <CloseButton type="button" onClick={() => setIsOpen(false)} aria-label="Close build details">
+              <DrawerTitle id={titleId}>{t('buildDetails.title', 'Build details')}</DrawerTitle>
+              <CloseButton
+                type="button"
+                onClick={() => setIsOpen(false)}
+                aria-label={t('buildDetails.close', 'Close build details')}
+              >
                 ×
               </CloseButton>
             </DrawerHeader>

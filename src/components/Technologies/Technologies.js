@@ -80,7 +80,7 @@ const Technologies = () => {
               <DrawerList>
                 <DrawerListItem>What I do: plan, build, operate, measure, improve</DrawerListItem>
                 <DrawerListItem>How I work: pragmatic, fast, focused on outcomes</DrawerListItem>
-                <DrawerListItem>Usually today: web projects (often TypeScript)</DrawerListItem>
+                <DrawerListItem>Usually today: web products (often TypeScript)</DrawerListItem>
                 <DrawerListItem>Also: mobile/desktop/embedded when it’s the right interface</DrawerListItem>
               </DrawerList>
               <DrawerNote>

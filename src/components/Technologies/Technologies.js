@@ -33,6 +33,18 @@ const Technologies = () => {
   }, []);
 
   useEffect(() => {
+    const handleOpenRequest = () => {
+      setIsOpen(true);
+    };
+
+    window.addEventListener('build-details:open', handleOpenRequest);
+
+    return () => {
+      window.removeEventListener('build-details:open', handleOpenRequest);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!isOpen) {
       if (window.location.hash === '#build-details') {
         window.history.replaceState({}, document.title, window.location.pathname + window.location.search);

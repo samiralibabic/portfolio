@@ -90,23 +90,25 @@ export const CompanyContainer = styled.div`
 	}
 `
 
-export const Slogan = styled.p`
-	color: rgba(255, 255, 255, 0.5);
-	min-width: 280px;
+export const BuildDetailsLink = styled(NavLink)`
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 14px;
 	letter-spacing: 0.02em;
-	font-size: 18px;
-	line-height: 30px;
-	padding: 1rem;
+	padding: 4px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	transition: color 0.2s ease, border-color 0.2s ease;
 
-	@media ${props => props.theme.breakpoints.md} {
-		font-size: 16px;
-		line-height: 28px;
+	&:hover {
+		color: #ffffff;
+		border-color: rgba(255, 255, 255, 0.6);
 	}
 
-	@media ${props => props.theme.breakpoints.sm} {
-		line-height: 22px;
-		font-size: 14px;
-		min-width: 100px;
+	&:focus {
+		outline: 2px solid rgba(255, 255, 255, 0.4);
+		outline-offset: 2px;
 	}
 `
 

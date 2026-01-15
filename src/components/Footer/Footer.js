@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import SocialIconsGroup from '../SocialIcons/SocialIcons';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, LegalLinks, LegalNavLink, SocialIconsContainer, ContactButton, ContactHints, ContactHintItem, ContactSection, NowSection, NowText } from './FooterStyles';
+import { BuildDetailsLink, CompanyContainer, FooterWrapper, LinkItem, LinkList, LinkTitle, LegalLinks, LegalNavLink, SocialIconsContainer, ContactButton, ContactHints, ContactHintItem, ContactSection, NowSection, NowText } from './FooterStyles';
 
 const Footer = () => {
   const { t } = useTranslation('common');
@@ -35,7 +35,9 @@ const Footer = () => {
 
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>{t('footer.slogan', 'Innovating one project at a time')}</Slogan>
+          <Link href="#build-details" scroll={false}>
+            <BuildDetailsLink>Build details</BuildDetailsLink>
+          </Link>
         </CompanyContainer>
         <SocialIconsGroup />
       </SocialIconsContainer>

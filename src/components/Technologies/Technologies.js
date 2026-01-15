@@ -1,127 +1,95 @@
-import React from 'react';
-import { DiGoogleCloudPlatform, DiJava, DiReact, DiWordpress } from 'react-icons/di';
-import { useTranslation } from 'next-i18next';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { TechGridContainer, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
-import { BlogCard } from '../Projects/ProjectsStyles';
-import { technologies } from '../../constants/constants';
-
-// Container style for better centering
-const containerStyle = {
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'center'
-};
-
-// Card style to make them narrower
-const cardStyle = {
-  width: '100%',
-  maxWidth: '450px',
-  margin: '0 auto'
-};
-
-// Style for subgroup titles
-const subgroupTitleStyle = {
-  fontSize: '18px',
-  fontWeight: '600',
-  color: '#fff',
-  marginTop: '15px',
-  marginBottom: '8px',
-  textAlign: 'center'
-};
-
-// Style for comma-separated tech list
-const techListStyle = {
-  fontSize: '16px',
-  lineHeight: '24px',
-  color: 'rgba(255, 255, 255, 0.75)',
-  padding: '0 10px 15px',
-  textAlign: 'center'
-};
+import React, { useEffect, useId, useState } from 'react';
+import { Section } from '../../styles/GlobalComponents';
+import {
+  CloseButton,
+  Drawer,
+  DrawerBody,
+  DrawerHeader,
+  DrawerIntro,
+  DrawerList,
+  DrawerListItem,
+  DrawerNote,
+  DrawerTitle,
+  OverlayBackdrop,
+} from './TechnologiesStyles';
 
 const Technologies = () => {
-  const { t } = useTranslation('common');
-  
-  // Translation mapping for subgroup titles
-  const getSubgroupTranslation = (category, subgroup) => {
-    const translationKey = `technologies.${category}Categories.${subgroup}`;
-    // Use the capitalized subgroup name as fallback
-    const fallback = subgroup.charAt(0).toUpperCase() + subgroup.slice(1);
-    return t(translationKey, fallback);
-  };
-  
+  const [isOpen, setIsOpen] = useState(false);
+  const titleId = useId();
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#build-details') {
+        setIsOpen(true);
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      if (window.location.hash === '#build-details') {
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+      }
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
-    <Section id='tech'>
-      <SectionDivider />
-      <SectionTitle main>{t('technologies.title')}</SectionTitle>
-      <SectionText>
-        {t('technologies.subtitle')}
-        <br />
-        <span style={{ opacity: 0.9 }}>{t('technologies.subtitleSecondLine')}</span>
-      </SectionText>
-      <div style={containerStyle}>
-        <TechGridContainer>
-          <BlogCard style={cardStyle}>
-            <ListContainer>
-              <ListTitle><DiReact size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.frontend', 'Front-End')}</ListTitle>
-              
-              {Object.entries(technologies.frontEnd).map(([subgroup, techs]) => (
-                <React.Fragment key={subgroup}>
-                  <div style={subgroupTitleStyle}>{getSubgroupTranslation('frontend', subgroup)}</div>
-                  <div style={techListStyle}>
-                    {techs.join(', ')}
-                  </div>
-                </React.Fragment>
-              ))}
-            </ListContainer>
-          </BlogCard>
-          
-          <BlogCard style={cardStyle}>
-            <ListContainer>
-              <ListTitle><DiJava size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.backend', 'Back-End')}</ListTitle>
-              
-              {Object.entries(technologies.backEnd).map(([subgroup, techs]) => (
-                <React.Fragment key={subgroup}>
-                  <div style={subgroupTitleStyle}>{getSubgroupTranslation('backend', subgroup)}</div>
-                  <div style={techListStyle}>
-                    {techs.join(', ')}
-                  </div>
-                </React.Fragment>
-              ))}
-            </ListContainer>
-          </BlogCard>
-          
-          <BlogCard style={cardStyle}>
-            <ListContainer>
-              <ListTitle><DiGoogleCloudPlatform size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.devops', 'DevOps')}</ListTitle>
-              
-              {Object.entries(technologies.devOps).map(([subgroup, techs]) => (
-                <React.Fragment key={subgroup}>
-                  <div style={subgroupTitleStyle}>{getSubgroupTranslation('devops', subgroup)}</div>
-                  <div style={techListStyle}>
-                    {techs.join(', ')}
-                  </div>
-                </React.Fragment>
-              ))}
-            </ListContainer>
-          </BlogCard>
-          
-          <BlogCard style={cardStyle}>
-            <ListContainer>
-              <ListTitle><DiWordpress size='30' style={{ minWidth: '30px', marginRight: '10px' }} />{t('technologies.additional', 'Additional Skills and Practices')}</ListTitle>
-              
-              {Object.entries(technologies.additionalSkills).map(([subgroup, techs]) => (
-                <React.Fragment key={subgroup}>
-                  <div style={subgroupTitleStyle}>{getSubgroupTranslation('additional', subgroup)}</div>
-                  <div style={techListStyle}>
-                    {techs.join(', ')}
-                  </div>
-                </React.Fragment>
-              ))}
-            </ListContainer>
-          </BlogCard>
-        </TechGridContainer>
-      </div>
+    <Section id="build-details" nopadding>
+      {isOpen && (
+        <OverlayBackdrop onClick={() => setIsOpen(false)}>
+          <Drawer
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={titleId}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <DrawerHeader>
+              <DrawerTitle id={titleId}>Build details</DrawerTitle>
+              <CloseButton type="button" onClick={() => setIsOpen(false)} aria-label="Close build details">
+                ×
+              </CloseButton>
+            </DrawerHeader>
+            <DrawerBody>
+              <DrawerIntro>
+                I build and run digital products end-to-end — from idea to production. I’m not tied to a
+                specific tech stack; tools are chosen based on what the problem needs.
+              </DrawerIntro>
+              <DrawerList>
+                <DrawerListItem>What I do: plan, build, operate, measure, improve</DrawerListItem>
+                <DrawerListItem>How I work: pragmatic, fast, focused on outcomes</DrawerListItem>
+                <DrawerListItem>Usually today: web projects (often TypeScript)</DrawerListItem>
+                <DrawerListItem>Also: mobile/desktop/embedded when it’s the right interface</DrawerListItem>
+              </DrawerList>
+              <DrawerNote>
+                Implementation can be AI-assisted — responsibility, decisions, and review are mine.
+              </DrawerNote>
+            </DrawerBody>
+          </Drawer>
+        </OverlayBackdrop>
+      )}
     </Section>
   );
 };

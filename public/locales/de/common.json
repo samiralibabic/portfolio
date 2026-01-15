@@ -19,7 +19,7 @@
     }
   },
   "navigation": {
-    "projects": "Projekte",
+    "projects": "Produkte",
     "technologies": "Build details",
     "about": "Über mich",
     "testimonials": "Referenzen",
@@ -30,13 +30,13 @@
     "social": "Soziale Medien"
   },
   "projects": {
-    "title": "Projekte",
+    "title": "Produkte",
     "subtitle": "Sehen Sie sich einige meiner neuesten Arbeiten an",
     "visit": "Besuchen",
     "discontinued": "EINGESTELLT",
     "sold": "AKQUIRIERT",
-    "showMore": "Mehr Projekte anzeigen",
-    "showLess": "Weniger Projekte anzeigen",
+    "showMore": "Mehr Produkte anzeigen",
+    "showLess": "Weniger Produkte anzeigen",
     "utilities": "Tools",
     "inactive": "Inaktiv"
   },
@@ -112,7 +112,7 @@
     "privacy": "Datenschutzerklärung",
     "legal": "Impressum",
     "email": "E-Mail",
-    "slogan": "Innovation, ein Projekt nach dem anderen"
+    "slogan": "Innovation, ein Produkt nach dem anderen"
   },
   "language": {
     "en": "Englisch",
@@ -120,7 +120,7 @@
   },
   "acomplishments": {
     "title": "Erfolge",
-    "projects": "Open Source Projekte",
+    "projects": "Open Source Produkte",
     "students": "Studenten",
     "followers": "Github Follower",
     "stars": "Github Sterne"

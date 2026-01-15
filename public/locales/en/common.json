@@ -19,7 +19,7 @@
     }
   },
   "navigation": {
-    "projects": "Projects",
+    "projects": "Products",
     "technologies": "Build details",
     "about": "About",
     "testimonials": "Testimonials",
@@ -30,13 +30,13 @@
     "social": "Social Media"
   },
   "projects": {
-    "title": "Projects",
+    "title": "Products",
     "subtitle": "Check out some of my recent work",
     "visit": "Visit",
     "discontinued": "DISCONTINUED",
     "sold": "ACQUIRED",
-    "showMore": "Show more projects",
-    "showLess": "Show fewer projects",
+    "showMore": "Show more products",
+    "showLess": "Show fewer products",
     "utilities": "Utilities",
     "inactive": "Inactive"
   },
@@ -112,7 +112,7 @@
     "privacy": "Privacy Policy",
     "legal": "Legal Notice",
     "email": "E-Mail",
-    "slogan": "Innovating one project at a time"
+    "slogan": "Innovating one product at a time"
   },
   "language": {
     "en": "English",
@@ -120,7 +120,7 @@
   },
   "acomplishments": {
     "title": "Acomplishments",
-    "projects": "Open Source Projects",
+    "projects": "Open Source Products",
     "students": "Students",
     "followers": "Github Followers",
     "stars": "Github Stars"

@@ -32,9 +32,9 @@ const Home = () => {
     <>
       <Head>
         <title>{t('meta.title', { defaultValue: 'Samir Alibabic - Software Engineer & Digital Entrepreneur' })}</title>
-        <meta name="description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship.' })} />
+        <meta name="description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing products and skills in software engineering, indie hacking, and entrepreneurship.' })} />
         <meta property="og:title" content={t('meta.title', { defaultValue: 'Samir Alibabic - Software Engineer & Digital Entrepreneur' })} />
-        <meta property="og:description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing projects and skills in software engineering, indie hacking, and entrepreneurship.' })} />
+        <meta property="og:description" content={t('meta.description', { defaultValue: 'Portfolio of Samir Alibabic - Showcasing products and skills in software engineering, indie hacking, and entrepreneurship.' })} />
         <meta property="og:image" content="https://www.samiralibabic.com/og-image.jpg" />
         <meta property="og:url" content="https://www.samiralibabic.com" />
         <meta name="twitter:card" content="summary_large_image" />

@@ -42,7 +42,15 @@
   },
   "buildDetails": {
     "title": "Technische Details",
-    "close": "Technische Details schließen"
+    "close": "Technische Details schließen",
+    "intro": "Ich baue und betreibe digitale Produkte durchgängig – von der Idee bis zur Produktion. Ich bin nicht an einen festen Technologie-Stack gebunden; Werkzeuge wähle ich danach aus, was die Aufgabe verlangt.",
+    "list": {
+      "plan": "Was ich tue: planen, bauen, betreiben, messen, verbessern",
+      "workStyle": "Wie ich arbeite: pragmatisch, schnell, fokussiert auf Ergebnisse",
+      "usually": "Meistens heute: Web-Produkte (oft TypeScript)",
+      "also": "Auch: Mobil/Desktop/eingebettete Systeme, wenn es die passende Oberfläche ist"
+    },
+    "note": "Die Umsetzung kann KI-gestützt sein – die Verantwortung, Entscheidungen und Prüfung liegen bei mir."
   },
   "technologies": {
     "title": "Technologien",

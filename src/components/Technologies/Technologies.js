@@ -91,19 +91,14 @@ const Technologies = () => {
               </CloseButton>
             </DrawerHeader>
             <DrawerBody>
-              <DrawerIntro>
-                I build and run digital products end-to-end — from idea to production. I’m not tied to a
-                specific tech stack; tools are chosen based on what the problem needs.
-              </DrawerIntro>
+              <DrawerIntro>{t('buildDetails.intro')}</DrawerIntro>
               <DrawerList>
-                <DrawerListItem>What I do: plan, build, operate, measure, improve</DrawerListItem>
-                <DrawerListItem>How I work: pragmatic, fast, focused on outcomes</DrawerListItem>
-                <DrawerListItem>Usually today: web products (often TypeScript)</DrawerListItem>
-                <DrawerListItem>Also: mobile/desktop/embedded when it’s the right interface</DrawerListItem>
+                <DrawerListItem>{t('buildDetails.list.plan')}</DrawerListItem>
+                <DrawerListItem>{t('buildDetails.list.workStyle')}</DrawerListItem>
+                <DrawerListItem>{t('buildDetails.list.usually')}</DrawerListItem>
+                <DrawerListItem>{t('buildDetails.list.also')}</DrawerListItem>
               </DrawerList>
-              <DrawerNote>
-                Implementation can be AI-assisted — responsibility, decisions, and review are mine.
-              </DrawerNote>
+              <DrawerNote>{t('buildDetails.note')}</DrawerNote>
             </DrawerBody>
           </Drawer>
         </OverlayBackdrop>

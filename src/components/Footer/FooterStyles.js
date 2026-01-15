@@ -98,7 +98,14 @@ export const BuildDetailsLink = styled(NavLink)`
 	font-size: 14px;
 	letter-spacing: 0.02em;
 	padding: 4px 0;
+	background: transparent;
+	border: 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 0;
+	cursor: pointer;
+	font-family: inherit;
+	appearance: none;
+	-webkit-appearance: none;
 	transition: color 0.2s ease, border-color 0.2s ease;
 
 	&:hover {

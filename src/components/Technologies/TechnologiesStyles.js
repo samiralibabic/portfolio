@@ -1,166 +1,99 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const TechGridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Always show 2 columns on desktop */
-  gap: 3rem; /* Increased gap to match projects section */
-  padding: 3rem;
-  max-width: 1000px; /* Limit the overall width */
-  width: 100%;
+export const OverlayBackdrop = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 12, 20, 0.72);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on tablet */
-    gap: 2rem;
+    align-items: flex-end;
     padding: 0;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-    gap: 2rem; /* Reduced gap for mobile */
   }
 `;
 
-export const ImageContainer = styled.div`
-  text-align: center;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
-  width: 100%;
-  padding: 60px;
-  margin-top: 48px;
+export const Drawer = styled.div`
+  background: ${(props) => props.theme.colors.background1};
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: min(560px, 92vw);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  padding: 24px;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+    max-height: 75vh;
+  }
+`;
+
+export const DrawerHeader = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+`;
+
+export const DrawerTitle = styled.h3`
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+`;
+
+export const CloseButton = styled.button`
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
+  transition: background 0.2s ease;
 
-  @media ${props => props.theme.breakpoints.lg} {
-    background-image: none;
-    padding: 0;
-    margin-top: 40px;
-  }
-  @media ${props => props.theme.breakpoints.md} {
-    background-image: none;
-    padding: 0;
-    margin-top: 16px;
-  }
-`
-
-export const MainImage = styled.img`
-  width: 100%;
-`
-
-export const List = styled.ul`
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin: 3rem 0;
-  
-  @media ${props => props.theme.breakpoints.lg}{
-    margin: 64px 0;
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
   }
 
-  @media ${props => props.theme.breakpoints.md}{
-    margin: 64px 0;
-    gap: 24px
+  &:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
   }
-  
-  @media ${props => props.theme.breakpoints.sm}{
-    display: flex;
-    flex-direction: column;
-    margin: 32px 0;
-  }
-`
+`;
 
-export const ListContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 15px 20px;
-  width: 100%;
-
-  @media ${props => props.theme.breakpoints.sm}{
-    padding: 10px 10px 15px;
-  }
-`
-
-export const ListTitle = styled.h4`
-  display: flex;
-  padding: 15px 0;
-  align-items: center;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0.02em;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-
-  @media ${props => props.theme.breakpoints.md}{
-    font-size: 22px;
-    line-height: 26px;
-    padding: 12px 0;
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
-    padding: 10px 0;
-  }
-`
-
-export const ListParagraph = styled.p`
+export const DrawerBody = styled.div`
+  color: rgba(255, 255, 255, 0.78);
   font-size: 16px;
-  line-height: 24px;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 0;
+  line-height: 26px;
+`;
 
-  @media ${props => props.theme.breakpoints.md}{
-    font-size: 15px;
-    line-height: 22px;
-  }
+export const DrawerIntro = styled.p`
+  margin: 0 0 16px 0;
+`;
 
-  @media ${props => props.theme.breakpoints.sm}{
-    font-size: 14px;
-    line-height: 20px;
-  }
-`
+export const DrawerList = styled.ul`
+  margin: 0 0 16px 18px;
+  padding: 0;
+`;
 
-export const ListItem = styled.li`
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
-  padding: 0 10px;
-
-  @media ${props => props.theme.breakpoints.md}{
-    margin-bottom: 6px;
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    margin-bottom: 4px;
-    flex-direction: row;
-  }
-`
-
-export const ListIcon = styled.img`
-  display: block;
-  width: 48px;
-  height: 48px;
+export const DrawerListItem = styled.li`
   margin-bottom: 10px;
-  
-  @media ${props => props.theme.breakpoints.md}{
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
-  }
+`;
 
-  @media ${props => props.theme.breakpoints.sm}{
-    width: 32px;
-    height: 32px;
-    margin-bottom: 0px;
-  }
-`
+export const DrawerNote = styled.p`
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+`;

@@ -46,7 +46,7 @@ const Header = () => {
         <Link href="#projects" scroll={false}>
           <NavLink>{t('navigation.projects')}</NavLink>
         </Link>
-        <Link href="#tech" scroll={false}>
+        <Link href="#build-details" scroll={false}>
           <NavLink>{t('navigation.technologies')}</NavLink>
         </Link>
         <Link href="#contact" scroll={false}>

@@ -90,7 +90,7 @@ export const projects = [
   {
     title: 'Monitor',
     description: 'A monitoring tool for uptime and performance checks on websites and services.',
-    image: '/images/monitor.svg',
+    image: '/images/monitor.webp',
     tags: ['Monitoring', 'Utilities'],
     visit: 'https://monitor.samiralibabic.com',
     id: 15,

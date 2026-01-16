@@ -30,7 +30,7 @@ npm install
 
 ## Verifying crawler-visible HTML
 
-The `/de` homepage renders the full product list server-side (including the items hidden behind the “Show more products” interaction), so bots can see the same content as hydrated browsers.
+The homepage renders the full product list server-side (including the items hidden behind the “Show more products” interaction), so bots can see the same content as hydrated browsers.
 
 To verify locally:
 
@@ -41,13 +41,19 @@ npm run build
 npm run start
 ```
 
-2. Confirm the HTML payload contains the full product list:
+2. Confirm the HTML payload contains the full product list (example uses a product name that appears in the “Show more products” section):
 
 ```bash
-curl -s http://localhost:3000/de | rg -i "products|show more|samiralibabic"
+curl -s http://localhost:3000/ | rg -i "ClipClean|Print2Social|Tierarzt-Liste"
 ```
 
-3. Optionally, run Lighthouse/SEO and confirm that the product cards and links are discoverable in the initial HTML response.
+3. Run the dev-only SSR check script to assert every product title + link exists in the HTML:
+
+```bash
+npm run check:ssr-products
+```
+
+4. In a browser, use “View Source” and search for any product title or link to confirm the full list is present in the raw HTML.
 
 ## Licence
 

@@ -164,6 +164,18 @@ export const ProjectStatusBanner = styled.div`
   }};
 `
 
+export const ProjectCardLink = styled.a`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+
+  &[data-disabled='true'] {
+    cursor: default;
+    pointer-events: none;
+  }
+`;
+
 export const ProjectsControlsRow = styled.div`
   width: 100%;
   display: flex;

@@ -12,6 +12,7 @@ import {
   TitleContent,
   ImgOverlay,
   ProjectStatusBanner,
+  ProjectCardLink,
   ProjectsControlsRow,
   ProjectGroupsWrapper,
   ProjectGroupDetails,
@@ -71,6 +72,7 @@ const Projects = () => {
     // Check project status
     const isDiscontinued = DISCONTINUED_PROJECT_IDS.includes(id);
     const isSold = SOLD_PROJECT_IDS.includes(id);
+    const isInactive = isDiscontinued || isSold;
 
     // Get translated description with correct path
     const translatedDescription = t(`projects:projects.${id}.description`, { defaultValue: description });
@@ -80,6 +82,10 @@ const Projects = () => {
       .replace('[DISCONTINUED]', '')
       .replace('[EINGESTELLT]', '')
       .trim();
+
+    const linkProps = isInactive
+      ? { 'data-disabled': 'true', 'aria-disabled': 'true', tabIndex: -1 }
+      : { target: '_blank', rel: 'noopener noreferrer' };
 
     return (
       <BlogCard key={id}>
@@ -95,94 +101,46 @@ const Projects = () => {
           </ProjectStatusBanner>
         )}
 
-        {/* Wrap the entire card in a link if not discontinued or sold */}
-        {(isDiscontinued || isSold) ? (
-          <>
-            {/* Image with grayscale for discontinued/sold projects */}
-            {image && (
-              <ImgOverlay>
-                <div style={{ position: 'relative', width: '100%', height: '200px' }}>
-                  <Image 
-                    src={image} 
-                    alt={title} 
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    style={{ 
-                      objectFit: 'cover',
-                      filter: 'grayscale(100%)',
-                      borderRadius: '12px 12px 0 0'
-                    }}
-                    priority={id === 12}
-                    loading={id === 12 ? "eager" : "lazy"}
-                    quality={id === 12 ? 90 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzYvLy82NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDT/2wBDAR0XFyAeIR4hISE0LSotNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDT/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAb/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                  />
-                </div>
-              </ImgOverlay>
-            )}
+        <ProjectCardLink href={visit} {...linkProps}>
+          {/* Image */}
+          {image && (
+            <ImgOverlay>
+              <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+                <Image 
+                  src={image} 
+                  alt={title} 
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={{ 
+                    objectFit: 'cover',
+                    filter: isInactive ? 'grayscale(100%)' : 'none',
+                    borderRadius: '12px 12px 0 0'
+                  }}
+                  priority={id === 12}
+                  loading={id === 12 ? "eager" : "lazy"}
+                  quality={id === 12 ? 90 : 75}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzYvLy82NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDT/2wBDAR0XFyAeIR4hISE0LSotNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDT/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAb/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                />
+              </div>
+            </ImgOverlay>
+          )}
 
-            <TitleContent>
-              <HeaderThree title={title}>
-                <span>{title}</span>
-              </HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo>{cleanDescription}</CardInfo>
-            <div>
-              <TagList>
-                {tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
-              </TagList>
-            </div>
-          </>
-        ) : (
-          <a href={visit} target="_blank" rel="noopener noreferrer" style={{ 
-            display: 'block', 
-            textDecoration: 'none',
-            color: 'inherit',
-            height: '100%'
-          }}>
-            {/* Image for active projects */}
-            {image && (
-              <ImgOverlay>
-                <div style={{ position: 'relative', width: '100%', height: '200px' }}>
-                  <Image 
-                    src={image} 
-                    alt={title} 
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    style={{ 
-                      objectFit: 'cover',
-                      borderRadius: '12px 12px 0 0'
-                    }}
-                    priority={id === 12}
-                    loading={id === 12 ? "eager" : "lazy"}
-                    quality={id === 12 ? 90 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzYvLy82NDQ0NDY0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDT/2wBDAR0XFyAeIR4hISE0LSotNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDT/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAb/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                  />
-                </div>
-              </ImgOverlay>
-            )}
-
-            <TitleContent>
-              <HeaderThree title={title}>
-                {title}
-              </HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo>{cleanDescription}</CardInfo>
-            <div>
-              <TagList>
-                {tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
-              </TagList>
-            </div>
-          </a>
-        )}
+          <TitleContent>
+            <HeaderThree title={title}>
+              {title}
+            </HeaderThree>
+            <Hr />
+          </TitleContent>
+          <CardInfo>{cleanDescription}</CardInfo>
+          <div>
+            <TagList>
+              {tags.map((tag, i) => (
+                <Tag key={i}>{tag}</Tag>
+              ))}
+            </TagList>
+          </div>
+        </ProjectCardLink>
       </BlogCard>
     );
   };
@@ -203,14 +161,21 @@ const Projects = () => {
 
       {(utilitiesProjects.length > 0 || inactiveProjects.length > 0) && (
         <ProjectsControlsRow>
-          <Button onClick={() => setShowMoreProjects((prev) => !prev)}>
+          <Button
+            onClick={() => setShowMoreProjects((prev) => !prev)}
+            aria-expanded={showMoreProjects}
+            aria-controls="project-groups"
+          >
             {showMoreProjects ? t('common:projects.showLess') : t('common:projects.showMore')}
           </Button>
         </ProjectsControlsRow>
       )}
 
       {(utilitiesProjects.length > 0 || inactiveProjects.length > 0) && (
-        <ProjectGroupsWrapper data-expanded={showMoreProjects}>
+        <ProjectGroupsWrapper
+          id="project-groups"
+          data-expanded={showMoreProjects ? 'true' : 'false'}
+        >
           {utilitiesProjects.length > 0 && (
             <ProjectGroupDetails open>
               <ProjectGroupSummary>

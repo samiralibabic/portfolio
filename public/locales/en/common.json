@@ -1,17 +1,16 @@
 {
   "meta": {
     "title": "Samir Alibabic - Software Engineer & Tech Founder",
-    "description": "I build and operate software products end-to-end — from code & data to distribution. Focus: organic growth (SEO/content/community) and clear, measurable systems."
+    "description": "I build and run software products. Focus: simple systems, clear outcomes."
   },
   "hero": {
     "title": "Software Engineer & Tech Founder",
-    "intro": "I build and operate software products end-to-end — from code & data to distribution.",
-    "introSecondLine": "Focus: organic growth (SEO/content/community) and clear, measurable systems.",
+    "intro": "I build and run software products.",
+    "introSecondLine": "From code and data to growth (SEO, content, community).",
     "contact": "Contact",
     "exploreProducts": "Explore products",
     "readBlog": "Read the blog",
     "proofChips": {
-      "mau": "4.2k+ MAU across active products",
       "solo": "Tech founder since 2024",
       "valtech": "Valtech (2016–2022)",
       "germany": "Germany",
@@ -37,13 +36,15 @@
     "sold": "ACQUIRED",
     "showMore": "Show more products",
     "showLess": "Show fewer products",
-    "utilities": "Utilities",
-    "inactive": "Inactive"
+    "utilities": "Labs",
+    "utilitiesHelper": "Experiments and small tools. Useful, but not my main focus.",
+    "inactive": "Archive",
+    "inactiveHelper": "Older projects: sold or discontinued."
   },
   "buildDetails": {
     "title": "Build details",
     "close": "Close build details",
-    "intro": "I build and run digital products end-to-end — from idea to production. I’m not tied to a specific tech stack; tools are chosen based on what the problem needs.",
+    "intro": "I build products from idea to operation. I choose tools based on the task.",
     "list": {
       "plan": "What I do: plan, build, operate, measure, improve",
       "workStyle": "How I work: pragmatic, fast, focused on outcomes",
@@ -94,9 +95,9 @@
   "about": {
     "title": "About Me",
     "subtitle": "My background and journey",
-    "bioLine1": "I've been building software since 2009 and have been operating products as a tech founder since 2024.",
-    "bioLine2": "Previously: Software Engineer at Valtech (2016–2022).",
-    "bioLine3": "Today: organic growth, clear systems, and products with their own distribution."
+    "bioLine1": "I’ve been building software since 2009.",
+    "bioLine2": "Since 2024, I’ve been working on my own products as a solo founder.",
+    "bioLine3": "Previously: Software Engineer at Valtech (2016–2022)."
   },
   "testimonials": {
     "title": "Testimonials",
@@ -104,7 +105,6 @@
   },
   "outcomes": {
     "title": "Selected Outcomes",
-    "mau": "4.2k+ MAU across active products",
     "portfolio": "Portfolio: software products, directories & tools",
     "experience": "Tech founder since 2024 · Valtech 2016–2022"
   },
@@ -117,7 +117,7 @@
   },
   "now": {
     "title": "Now",
-    "focus": "Now: focused on PODB & Tierarzt-Liste (growth + monetization).",
+    "focus": "Now: focused on PrintOnDemandBusiness and Tierarzt-Liste.",
     "openTo": "Open to: sponsorships, integrations, partnerships."
   },
   "footer": {

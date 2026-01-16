@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
@@ -47,21 +47,13 @@ const SOLD_PROJECT_IDS = [11]; // affiliatecompanies.net
 const FEATURED_PROJECT_IDS = [12, 13, 8, 2]; // PODB, tierarzt-liste, print2social, lustigedruckshirts.de - ClipClean moved to utilities
 
 const Projects = () => {
-  const { t, i18n } = useTranslation(['common', 'projects']);
-  const [discontinuedProjects, setDiscontinuedProjects] = useState(DISCONTINUED_PROJECT_IDS);
-  const [soldProjects, setSoldProjects] = useState(SOLD_PROJECT_IDS);
+  const { t } = useTranslation(['common', 'projects']);
   const [showMoreProjects, setShowMoreProjects] = useState(false);
-  
-  useEffect(() => {
-    // Force re-render when language changes
-    setDiscontinuedProjects([...DISCONTINUED_PROJECT_IDS]);
-    setSoldProjects([...SOLD_PROJECT_IDS]);
-  }, [i18n.language]);
 
   const orderedProjects = projects.slice().reverse();
 
   const isInactiveProjectId = (id) =>
-    discontinuedProjects.includes(id) || soldProjects.includes(id);
+    DISCONTINUED_PROJECT_IDS.includes(id) || SOLD_PROJECT_IDS.includes(id);
 
   const featuredProjects = orderedProjects.filter(({ id }) =>
     FEATURED_PROJECT_IDS.includes(id)
@@ -77,8 +69,8 @@ const Projects = () => {
 
   const renderProjectCard = ({ id, image, title, description, tags, visit }) => {
     // Check project status
-    const isDiscontinued = discontinuedProjects.includes(id);
-    const isSold = soldProjects.includes(id);
+    const isDiscontinued = DISCONTINUED_PROJECT_IDS.includes(id);
+    const isSold = SOLD_PROJECT_IDS.includes(id);
 
     // Get translated description with correct path
     const translatedDescription = t(`projects:projects.${id}.description`, { defaultValue: description });
@@ -217,8 +209,8 @@ const Projects = () => {
         </ProjectsControlsRow>
       )}
 
-      {showMoreProjects && (
-        <ProjectGroupsWrapper>
+      {(utilitiesProjects.length > 0 || inactiveProjects.length > 0) && (
+        <ProjectGroupsWrapper data-expanded={showMoreProjects}>
           {utilitiesProjects.length > 0 && (
             <ProjectGroupDetails open>
               <ProjectGroupSummary>

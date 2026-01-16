@@ -11,6 +11,7 @@ A portfolio with basic information about skills and experience.
 
 - [About](#about)
 - [Getting Started](#getting-started)
+- [Verifying crawler-visible HTML](#verifying-crawler-visible-html)
 - [License](##license)
 
 ## About
@@ -26,6 +27,27 @@ git clone https://github.com/samiralibabic/portfolio.git
 cd portfolio
 npm install
 ```
+
+## Verifying crawler-visible HTML
+
+The `/de` homepage renders the full product list server-side (including the items hidden behind the “Show more products” interaction), so bots can see the same content as hydrated browsers.
+
+To verify locally:
+
+1. Build and start the app:
+
+```bash
+npm run build
+npm run start
+```
+
+2. Confirm the HTML payload contains the full product list:
+
+```bash
+curl -s http://localhost:3000/de | rg -i "products|show more|samiralibabic"
+```
+
+3. Optionally, run Lighthouse/SEO and confirm that the product cards and links are discoverable in the initial HTML response.
 
 ## Licence
 

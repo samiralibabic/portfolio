@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html lang='en-GB'>
+      <Html lang='en-GB' className="no-js">
         <Head>
           <meta charSet="utf-8" />
           <meta name="keywords" content="software engineer, digital entrepreneur, portfolio, web development" />
@@ -63,6 +63,12 @@ export default class MyDocument extends Document {
               }
             `}
           </style>
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');",
+            }}
+          />
         </Head>
         <body>
           <Main />

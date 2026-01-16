@@ -169,12 +169,20 @@ export const ProjectsControlsRow = styled.div`
   display: flex;
   justify-content: center;
   margin: 24px 0 0;
+
+  html.no-js & {
+    display: none;
+  }
 `;
 
 export const ProjectGroupsWrapper = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 28px auto 0;
+
+  html.js &[data-expanded='false'] {
+    display: none;
+  }
 `;
 
 export const ProjectGroupDetails = styled.details`

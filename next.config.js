@@ -16,11 +16,11 @@ module.exports = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://testimonial.to https://*.testimonial.to https://www.googletagmanager.com https://www.google-analytics.com https://vitals.vercel-insights.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://testimonial.to https://*.testimonial.to https://www.googletagmanager.com https://www.google-analytics.com https://vitals.vercel-insights.com https://analytics.tierarzt-liste.de",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.testimonial.to",
               "img-src 'self' data: https://*.testimonial.to https://www.google-analytics.com",
               "font-src 'self' https://fonts.gstatic.com",
-              "connect-src 'self' https://*.testimonial.to https://www.google-analytics.com https://vitals.vercel-insights.com",
+              "connect-src 'self' https://*.testimonial.to https://www.google-analytics.com https://vitals.vercel-insights.com https://analytics.tierarzt-liste.de",
               "frame-src https://embed-v2.testimonial.to https://testimonial.to https://*.testimonial.to",
               "object-src 'none'"
             ].join('; ')

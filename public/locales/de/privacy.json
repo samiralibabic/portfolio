@@ -158,6 +158,12 @@
       "title": "Font Awesome (lokales Hosting)",
       "text1": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu Servern von Fonticons, Inc. findet dabei nicht statt.",
       "text2": "Weitere Informationen zu Font Awesome finden Sie in der Datenschutzerklärung für Font Awesome unter: https://fontawesome.com/privacy."
+    },
+    "umami": {
+      "title": "Umami Analytics",
+      "text1": "Diese Website nutzt Umami, eine datenschutzfreundliche Webanalyse, um die Nutzung der Website auszuwerten.",
+      "text2": "Umami verarbeitet aggregierte Nutzungsdaten (z. B. Seitenaufrufe, Referrer und Geräteinformationen), um die Website zu verbessern. Wir erstellen keine Nutzerprofile.",
+      "text3": "Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren und effizienten Bereitstellung sowie Verbesserung dieser Website (Art. 6 Abs. 1 lit. f DSGVO)."
     }
   },
   "source": "Quelle: https://www.e-recht24.de"

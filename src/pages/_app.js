@@ -14,8 +14,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 const UMAMI_WEBSITE_IDS = {
-  'tierarzt-liste.com': '6e08ea50-4ca6-434a-9615-c52e47371a2f',
-  'tierarzt-liste.de': 'd7457f3d-15d3-4d6d-b662-ae2dc867064d',
+  'samiralibabic.com': '6e08ea50-4ca6-434a-9615-c52e47371a2f',
+  'samiralibabic.de': 'd7457f3d-15d3-4d6d-b662-ae2dc867064d',
 };
 
 const UMAMI_SCRIPT_SRC = 'https://analytics.tierarzt-liste.de/script.js';

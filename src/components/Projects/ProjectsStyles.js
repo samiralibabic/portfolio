@@ -220,6 +220,12 @@ export const ProjectGroupSummary = styled.summary`
   }
 `;
 
+export const ProjectGroupHelper = styled.p`
+  margin: 4px 2px 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+`;
+
 export const ProjectGroupContent = styled.div`
   margin-top: 16px;
 `;

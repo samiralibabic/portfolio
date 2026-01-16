@@ -2,52 +2,52 @@
   "projects": {
     "title": "Products",
     "0": {
-      "description": "A platform to organize, track, and analyze the performance of shared links."
+      "description": "Save links and track clicks."
     },
     "1": {
-      "description": "[DISCONTINUED] Turn your Hashnode blog into a Notion database and manage it with everything else."
+      "description": "Save a Hashnode blog in Notion."
     },
     "2": {
-      "description": "A Print-On-Demand shop for humorous T-shirts and bags in the German market."
+      "description": "Humor merch for the German market."
     },
     "3": {
-      "description": "A Print-On-Demand shop for travel-related products in the German market."
+      "description": "Store (discontinued)."
     },
     "4": {
-      "description": "[DISCONTINUED] A Print-On-Demand shop for dog and cat lovers in the German market."
+      "description": "Store (discontinued)."
     },
     "5": {
-      "description": "A Print-On-Demand shop for retro-style home and decorations in the German market."
+      "description": "Store (discontinued)."
     },
     "6": {
-      "description": "[DISCONTINUED] A Print-On-Demand shop for baby products in the German market."
+      "description": "Store (discontinued)."
     },
     "7": {
-      "description": "A Notion template for Noah Kagan's book \"Million Dollar Weekend.\""
+      "description": "Notion template for “Million Dollar Weekend”."
     },
     "8": {
-      "description": "An AI-powered social media manager for Print-On-Demand businesses."
+      "description": "Make social media easier for print-on-demand sellers."
     },
     "9": {
-      "description": "A niche German website with funny slogans and jokes that drives traffic to other ventures."
+      "description": "Funny quotes. A traffic experiment."
     },
     "10": {
-      "description": "A web crawler to gather external links from any page or entire domain."
+      "description": "Crawls pages and collects links."
     },
     "11": {
-      "description": "Discover the top affiliate programs with excellent earning potential."
+      "description": "Affiliate program directory."
     },
     "12": {
-      "description": "A directory and content hub for print-on-demand: find vendors, compare options, and make decisions faster."
+      "description": "Find and compare print-on-demand suppliers."
     },
     "13": {
-      "description": "A comprehensive veterinary directory for Germany — focused on discoverability, structure, and local search."
+      "description": "Find vets in Germany. Local and structured."
     },
     "14": {
-      "description": "An AI-powered audio cleaning service that removes filler words and awkward pauses from podcasts and recordings."
+      "description": "Cleaner audio: fewer filler words, fewer awkward pauses."
     },
     "15": {
-      "description": "A monitoring tool for uptime and performance checks on websites and services."
+      "description": "Website monitoring: uptime and performance."
     }
   }
-} 
+}

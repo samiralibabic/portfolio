@@ -17,6 +17,7 @@ import {
   ProjectGroupsWrapper,
   ProjectGroupDetails,
   ProjectGroupSummary,
+  ProjectGroupHelper,
   ProjectGroupContent,
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
@@ -25,8 +26,8 @@ import { projects } from '../../constants/constants';
 
 // Masonry breakpoints
 const breakpointColumnsObj = {
-  default: 3,
-  1100: 2,
+  default: 4,
+  1200: 2,
   700: 1
 };
 
@@ -182,6 +183,7 @@ const Projects = () => {
                 {t('common:projects.utilities')} ({utilitiesProjects.length})
               </ProjectGroupSummary>
               <ProjectGroupContent>
+                <ProjectGroupHelper>{t('common:projects.utilitiesHelper')}</ProjectGroupHelper>
                 <div style={containerStyle}>
                   <Masonry
                     breakpointCols={breakpointColumnsObj}
@@ -201,6 +203,7 @@ const Projects = () => {
                 {t('common:projects.inactive')} ({inactiveProjects.length})
               </ProjectGroupSummary>
               <ProjectGroupContent>
+                <ProjectGroupHelper>{t('common:projects.inactiveHelper')}</ProjectGroupHelper>
                 <div style={containerStyle}>
                   <Masonry
                     breakpointCols={breakpointColumnsObj}

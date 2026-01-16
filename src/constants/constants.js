@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'LinkTracker',
-    description: 'A platform to organize, track, and analyze the performance of shared links.',
+    description: 'Save links and track clicks.',
     image: '/images/linktracker.webp',
     tags: ['SaaS', 'Link Management'],
     visit: 'https://linktracker.info',
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     title: 'hashion',
-    description: 'Turn your Hashnode blog into a Notion database and manage it with everything else.',
+    description: 'Save a Hashnode blog in Notion.',
     image: '/images/hashion.webp',
     tags: ['Blogging', 'Notion', 'Hashnode'],
     visit: 'https://hashion.link',
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     title: 'LustigeDruckShirts',
-    description: 'A Print-On-Demand shop for humorous T-shirts and bags in the German market.',
+    description: 'Humor merch for the German market.',
     image: '/images/lustigedruckshirts.webp',
     tags: ['Print-On-Demand', 'E-commerce'],
     visit: 'https://lustigedruckshirts.de',
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     title: 'Reise Prints',
-    description: 'A Print-On-Demand shop for travel-related products in the German market.',
+    description: 'Store (discontinued).',
     image: '/images/reiseprints.webp',
     tags: ['Print-On-Demand', 'Travel'],
     visit: 'https://reiseprints.de',
@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     title: 'Hunde & Katzen Druck',
-    description: 'A Print-On-Demand shop for dog and cat lovers in the German market.',
+    description: 'Store (discontinued).',
     image: '/images/hundekatzendruck.webp',
     tags: ['Print-On-Demand', 'E-commerce'],
     visit: 'https://hundekatzendruck.de',
@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     title: 'Retro Heim & Leben',
-    description: 'A Print-On-Demand shop for retro-style home and decorations in the German market.',
+    description: 'Store (discontinued).',
     image: '/images/retroheimundleben.webp',
     tags: ['Print-On-Demand', 'Home Decor'],
     visit: 'https://retroheimundleben.de',
@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     title: 'Personalisierte Babykleidung',
-    description: 'A Print-On-Demand shop for baby products in the German market.',
+    description: 'Store (discontinued).',
     image: '/images/personalisiertebabykleidung.webp',
     tags: ['Print-On-Demand', 'Baby Products'],
     visit: 'https://personalisiertebabykleidung.de',
@@ -57,7 +57,7 @@ export const projects = [
   },
   {
     title: 'Notion Template (MDW)',
-    description: "A Notion template for Noah Kagan's book \"Million Dollar Weekend.\"",
+    description: 'Notion template for “Million Dollar Weekend”.',
     image: '/images/notion-template.webp',
     tags: ['Notion', 'Templates'],
     visit: 'https://www.notion.so/templates/million-dollar-weekend-workbook',
@@ -65,7 +65,7 @@ export const projects = [
   },
   {
     title: 'Print2Social',
-    description: 'An AI-powered social media manager for Print-On-Demand businesses.',
+    description: 'Make social media easier for print-on-demand sellers.',
     image: '/images/print2social.webp',
     tags: ['SaaS', 'Automation', 'Print-On-Demand'],
     visit: 'https://print2social.com',
@@ -73,7 +73,7 @@ export const projects = [
   },
   {
     title: 'Lustige Sprüche',
-    description: 'A niche German website with funny slogans and jokes that drives traffic to other ventures.',
+    description: 'Funny quotes. A traffic experiment.',
     image: '/images/lustigesprueche.webp',
     tags: ['SEO', 'Blogging', 'Humor'],
     visit: 'https://lustigesprueche.online',
@@ -81,7 +81,7 @@ export const projects = [
   },
   {
     title: 'WebCrawler',
-    description: 'A web crawler to gather external links from any page or entire domain.',
+    description: 'Crawls pages and collects links.',
     image: '/images/webcrawler.webp',
     tags: ['Web Crawling', 'Link Building'],
     visit: 'https://crawler.samiralibabic.com',
@@ -89,7 +89,7 @@ export const projects = [
   },
   {
     title: 'Monitor',
-    description: 'A monitoring tool for uptime and performance checks on websites and services.',
+    description: 'Website monitoring: uptime and performance.',
     image: '/images/monitor.webp',
     tags: ['Monitoring', 'Utilities'],
     visit: 'https://monitor.samiralibabic.com',
@@ -97,7 +97,7 @@ export const projects = [
   },
   {
     title: 'Affiliate Companies',
-    description: 'Discover the top affiliate programs with excellent earning potential.',
+    description: 'Affiliate program directory.',
     image: '/images/affiliatecompanies.webp',
     tags: ['Affiliate Marketing', 'Directory'],
     visit: 'https://affiliatecompanies.net',
@@ -105,7 +105,7 @@ export const projects = [
   },
   {
     title: 'Print On Demand Business',
-    description: 'A comprehensive directory of suppliers for your print-on-demand businesses.',
+    description: 'Find and compare print-on-demand suppliers.',
     image: '/images/printondemandbusiness.webp',
     tags: ['Print-On-Demand', 'Directory'],
     visit: 'https://printondemandbusiness.com',
@@ -113,7 +113,7 @@ export const projects = [
   },
   {
     title: 'Tierarzt-Liste',
-    description: 'A comprehensive veterinarian directory for Germany with over 1849 veterinarians in 1057 practices and clinics.',
+    description: 'Find vets in Germany. Local and structured.',
     image: '/images/tierarzt-liste.webp',
     tags: ['Directory', 'Healthcare', 'Veterinary'],
     visit: 'https://tierarzt-liste.de',
@@ -121,7 +121,7 @@ export const projects = [
   },
   {
     title: 'ClipClean',
-    description: 'An AI-powered audio cleaning service that removes filler words and awkward pauses from podcasts and recordings.',
+    description: 'Cleaner audio: fewer filler words, fewer awkward pauses.',
     image: '/images/clipclean.webp',
     tags: ['SaaS', 'AI', 'Audio Processing'],
     visit: 'https://clipclean.eu',

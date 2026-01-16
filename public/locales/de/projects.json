@@ -2,52 +2,52 @@
   "projects": {
     "title": "Produkte",
     "0": {
-      "description": "Eine Plattform zum Organisieren, Verfolgen und Analysieren der Leistung geteilter Links."
+      "description": "Links speichern und Klicks auswerten."
     },
     "1": {
-      "description": "[EINGESTELLT] Verwandeln Sie Ihren Hashnode-Blog in eine Notion-Datenbank und verwalten Sie ihn zusammen mit allem anderen."
+      "description": "Hashnode-Blog in Notion speichern und verwalten."
     },
     "2": {
-      "description": "Ein Print-On-Demand-Shop für humorvolle T-Shirts und Taschen auf dem deutschen Markt."
+      "description": "Humor-Merch für den deutschen Markt."
     },
     "3": {
-      "description": "Ein Print-On-Demand-Shop für reisebezogene Produkte auf dem deutschen Markt."
+      "description": "Shop (eingestellt)."
     },
     "4": {
-      "description": "[EINGESTELLT] Ein Print-On-Demand-Shop für Hunde- und Katzenliebhaber auf dem deutschen Markt."
+      "description": "Shop (eingestellt)."
     },
     "5": {
-      "description": "Ein Print-On-Demand-Shop für Retro-Stil Heim und Dekorationen auf dem deutschen Markt."
+      "description": "Shop (eingestellt)."
     },
     "6": {
-      "description": "[EINGESTELLT] Ein Print-On-Demand-Shop für Babyprodukte auf dem deutschen Markt."
+      "description": "Shop (eingestellt)."
     },
     "7": {
-      "description": "Eine Notion-Vorlage für Noah Kagans Buch \"Million Dollar Weekend\"."
+      "description": "Notion-Vorlage für „Million Dollar Weekend“."
     },
     "8": {
-      "description": "Ein KI-gesteuerter Social-Media-Manager für Print-On-Demand-Unternehmen."
+      "description": "Social Media für Print-on-Demand einfacher machen."
     },
     "9": {
-      "description": "Eine Nischen-Website mit lustigen Sprüchen und Witzen, die Traffic zu anderen Produkten lenkt."
+      "description": "Sprüche und Witze. Ein Traffic-Experiment."
     },
     "10": {
-      "description": "Ein Web-Crawler zum Sammeln externer Links von beliebigen Seiten oder ganzen Domains."
+      "description": "Crawlt Seiten und sammelt Links."
     },
     "11": {
-      "description": "Entdecken Sie die besten Partnerprogramme mit ausgezeichnetem Verdienstpotenzial."
+      "description": "Verzeichnis für Affiliate-Programme."
     },
     "12": {
-      "description": "Ein Verzeichnis und Content-Hub für Print-on-Demand: Anbieter finden, vergleichen und Entscheidungen schneller treffen."
+      "description": "Print-on-Demand-Anbieter finden und vergleichen."
     },
     "13": {
-      "description": "Ein umfassendes Tierarztverzeichnis für Deutschland – mit Fokus auf Auffindbarkeit, Struktur und lokale Suche."
+      "description": "Tierärzte in Deutschland finden. Lokal und strukturiert."
     },
     "14": {
-      "description": "Ein KI-gestützter Audio-Bereinigungsservice, der Füllwörter und peinliche Pausen aus Podcasts und Aufnahmen entfernt."
+      "description": "Macht Audio sauberer: weniger Füllwörter, weniger Pausen."
     },
     "15": {
-      "description": "Ein Monitoring-Tool für Verfügbarkeits- und Performance-Prüfungen von Websites und Services."
+      "description": "Überwacht Websites: Uptime und Performance."
     }
   }
 }

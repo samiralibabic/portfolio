@@ -19,7 +19,6 @@ const Hero = (props) => {
         <span style={{ opacity: 0.8 }}>{t('hero.introSecondLine')}</span>
       </SectionText>
       <ProofChipsContainer>
-        <ProofChip>{t('hero.proofChips.mau')}</ProofChip>
         <ProofChip>{t('hero.proofChips.solo')}</ProofChip>
         <ProofChip>{t('hero.proofChips.valtech')}</ProofChip>
         <ProofChip>{t('hero.proofChips.germany')}</ProofChip>

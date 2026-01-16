@@ -1,17 +1,16 @@
 {
   "meta": {
     "title": "Samir Alibabic - Software-Ingenieur & Digital-Unternehmer",
-    "description": "Ich baue und betreibe Software-Produkte end-to-end – von Code & Daten bis Distribution. Fokus: organisches Wachstum (SEO/Content/Community) und klare, messbare Systeme."
+    "description": "Ich baue und betreibe Software-Produkte. Fokus: einfache Systeme, klare Ergebnisse."
   },
   "hero": {
     "title": "Software-Ingenieur & Digital-Unternehmer",
-    "intro": "Ich baue und betreibe Software-Produkte end-to-end – von Code & Daten bis Distribution.",
-    "introSecondLine": "Fokus: organisches Wachstum (SEO/Content/Community) und klare, messbare Systeme.",
+    "intro": "Ich baue und betreibe Software-Produkte.",
+    "introSecondLine": "Von Code und Daten bis zu Wachstum (SEO, Content, Community).",
     "contact": "Kontakt",
     "exploreProducts": "Produkte ansehen",
     "readBlog": "Blog lesen",
     "proofChips": {
-      "mau": "4.2k+ MAU über aktive Produkte",
       "solo": "Digital-Unternehmer seit 2024",
       "valtech": "Valtech (2016–2022)",
       "germany": "Deutschland",
@@ -37,13 +36,15 @@
     "sold": "AKQUIRIERT",
     "showMore": "Mehr Produkte anzeigen",
     "showLess": "Weniger Produkte anzeigen",
-    "utilities": "Tools",
-    "inactive": "Inaktiv"
+    "utilities": "Labs",
+    "utilitiesHelper": "Experimente und kleine Tools. Nützlich, aber nicht mein Hauptfokus.",
+    "inactive": "Archiv",
+    "inactiveHelper": "Ältere Projekte: verkauft oder eingestellt."
   },
   "buildDetails": {
     "title": "Technische Details",
     "close": "Technische Details schließen",
-    "intro": "Ich baue und betreibe digitale Produkte durchgängig – von der Idee bis zur Produktion. Ich bin nicht an einen festen Technologie-Stack gebunden; Werkzeuge wähle ich danach aus, was die Aufgabe verlangt.",
+    "intro": "Ich baue Produkte von der Idee bis zum Betrieb. Die Tools wähle ich nach der Aufgabe.",
     "list": {
       "plan": "Was ich tue: planen, bauen, betreiben, messen, verbessern",
       "workStyle": "Wie ich arbeite: pragmatisch, schnell, fokussiert auf Ergebnisse",
@@ -94,9 +95,9 @@
   "about": {
     "title": "Über Mich",
     "subtitle": "Mein Hintergrund und meine Reise",
-    "bioLine1": "Ich entwickle seit 2009 Software und baue seit 2024 Produkte als Digital-Unternehmer.",
-    "bioLine2": "Davor: Software Engineer bei Valtech (2016–2022).",
-    "bioLine3": "Heute: organisches Wachstum, klare Systeme und Produkte mit eigener Distribution."
+    "bioLine1": "Ich baue seit 2009 Software.",
+    "bioLine2": "Seit 2024 arbeite ich als Solo-Founder an eigenen Produkten.",
+    "bioLine3": "Davor: Software Engineer bei Valtech (2016–2022)."
   },
   "testimonials": {
     "title": "Referenzen",
@@ -104,7 +105,6 @@
   },
   "outcomes": {
     "title": "Ausgewählte Ergebnisse",
-    "mau": "4.2k+ MAU über aktive Produkte",
     "portfolio": "Portfolio: Software-Produkte, Verzeichnisse & Tools",
     "experience": "Digital-Unternehmer seit 2024 · Valtech 2016–2022"
   },
@@ -117,8 +117,8 @@
   },
   "now": {
     "title": "Aktuell",
-    "focus": "Aktuell: Fokus auf PODB & Tierarzt-Liste (Wachstum + Monetarisierung).",
-    "openTo": "Offen für: Sponsorships, Integrationen, Partnerschaften."
+    "focus": "Aktuell: Fokus auf PrintOnDemandBusiness und Tierarzt-Liste.",
+    "openTo": "Offen für: Sponsoring, Integrationen, Partnerschaften."
   },
   "footer": {
     "privacy": "Datenschutzerklärung",

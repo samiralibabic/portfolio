@@ -158,6 +158,12 @@
       "title": "Font Awesome (Local Hosting)",
       "text1": "This site uses Font Awesome for the consistent display of fonts. Font Awesome is locally installed, and there is no connection to servers of Fonticons, Inc.",
       "text2": "For more information about Font Awesome, please refer to the Font Awesome Privacy Policy at: https://fontawesome.com/privacy."
+    },
+    "umami": {
+      "title": "Umami Analytics",
+      "text1": "This website uses Umami, a privacy-focused analytics solution, to evaluate how visitors use the site.",
+      "text2": "Umami processes aggregated usage data (such as page views, referrers, and device information) to help us improve the website. We do not use Umami to create user profiles.",
+      "text3": "Data processing is based on our legitimate interest in the secure and efficient operation and improvement of this website (Art. 6(1)(f) GDPR)."
     }
   },
   "source": "Source: https://www.e-recht24.de"

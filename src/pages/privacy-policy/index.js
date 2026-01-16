@@ -150,6 +150,10 @@ const PrivacyPolicy = () => {
               <LegalNavLink>https://fontawesome.com/privacy</LegalNavLink>
             </Link>.
           </SectionSubText><br />
+          <LegalSectionH3>{t('plugins.umami.title')}</LegalSectionH3>
+          <SectionSubText>{t('plugins.umami.text1')}</SectionSubText>
+          <SectionSubText>{t('plugins.umami.text2')}</SectionSubText>
+          <SectionSubText>{t('plugins.umami.text3')}</SectionSubText>
           
           <SectionSubText>
             {t('source')}

@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Samir Alibabic - Software Engineer & Solo Founder",
+    "title": "Samir Alibabic - Software Engineer & Tech Founder",
     "description": "I build and operate software products end-to-end — from code & data to distribution. Focus: organic growth (SEO/content/community) and clear, measurable systems."
   },
   "hero": {
-    "title": "Software Engineer & Solo Founder",
+    "title": "Software Engineer & Tech Founder",
     "intro": "I build and operate software products end-to-end — from code & data to distribution.",
     "introSecondLine": "Focus: organic growth (SEO/content/community) and clear, measurable systems.",
     "contact": "Contact",
@@ -12,7 +12,7 @@
     "readBlog": "Read the blog",
     "proofChips": {
       "mau": "4.2k+ MAU across active products",
-      "solo": "Solo since 2024",
+      "solo": "Tech founder since 2024",
       "valtech": "Valtech (2016–2022)",
       "germany": "Germany",
       "since": "Building since 2009"
@@ -94,7 +94,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "My background and journey",
-    "bioLine1": "I've been building software since 2009 and have been operating products as a solo founder since 2024.",
+    "bioLine1": "I've been building software since 2009 and have been operating products as a tech founder since 2024.",
     "bioLine2": "Previously: Software Engineer at Valtech (2016–2022).",
     "bioLine3": "Today: organic growth, clear systems, and products with their own distribution."
   },
@@ -106,7 +106,7 @@
     "title": "Selected Outcomes",
     "mau": "4.2k+ MAU across active products",
     "portfolio": "Portfolio: software products, directories & tools",
-    "experience": "Solo since 2024 · Valtech 2016–2022"
+    "experience": "Tech founder since 2024 · Valtech 2016–2022"
   },
   "contact": {
     "sendEmail": "Send email",

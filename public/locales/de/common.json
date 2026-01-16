@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Samir Alibabic - Software-Ingenieur & Solo-Unternehmer",
+    "title": "Samir Alibabic - Software-Ingenieur & Digital-Unternehmer",
     "description": "Ich baue und betreibe Software-Produkte end-to-end – von Code & Daten bis Distribution. Fokus: organisches Wachstum (SEO/Content/Community) und klare, messbare Systeme."
   },
   "hero": {
-    "title": "Software-Ingenieur & Solo-Unternehmer",
+    "title": "Software-Ingenieur & Digital-Unternehmer",
     "intro": "Ich baue und betreibe Software-Produkte end-to-end – von Code & Daten bis Distribution.",
     "introSecondLine": "Fokus: organisches Wachstum (SEO/Content/Community) und klare, messbare Systeme.",
     "contact": "Kontakt",
@@ -12,7 +12,7 @@
     "readBlog": "Blog lesen",
     "proofChips": {
       "mau": "4.2k+ MAU über aktive Produkte",
-      "solo": "Solo seit 2024",
+      "solo": "Digital-Unternehmer seit 2024",
       "valtech": "Valtech (2016–2022)",
       "germany": "Deutschland",
       "since": "Seit 2009 in Software"
@@ -94,7 +94,7 @@
   "about": {
     "title": "Über Mich",
     "subtitle": "Mein Hintergrund und meine Reise",
-    "bioLine1": "Ich entwickle seit 2009 Software und baue seit 2024 Produkte als Solo-Unternehmer.",
+    "bioLine1": "Ich entwickle seit 2009 Software und baue seit 2024 Produkte als Digital-Unternehmer.",
     "bioLine2": "Davor: Software Engineer bei Valtech (2016–2022).",
     "bioLine3": "Heute: organisches Wachstum, klare Systeme und Produkte mit eigener Distribution."
   },
@@ -106,7 +106,7 @@
     "title": "Ausgewählte Ergebnisse",
     "mau": "4.2k+ MAU über aktive Produkte",
     "portfolio": "Portfolio: Software-Produkte, Verzeichnisse & Tools",
-    "experience": "Solo seit 2024 · Valtech 2016–2022"
+    "experience": "Digital-Unternehmer seit 2024 · Valtech 2016–2022"
   },
   "contact": {
     "sendEmail": "E-Mail senden",

@@ -59,10 +59,13 @@ export const BlogCard = styled.div`
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 2rem;
   padding: ${(props) => props.nopadding ? '0' : '3rem'};
   grid-auto-flow: dense;
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: minmax(0, 1fr);
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;

@@ -26,9 +26,8 @@ import { projects } from '../../constants/constants';
 
 // Masonry breakpoints
 const breakpointColumnsObj = {
-  default: 4,
-  1200: 2,
-  700: 1
+  default: 2,
+  900: 1
 };
 
 // Container style for better mobile centering
